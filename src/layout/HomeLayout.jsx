@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import { Outlet } from 'react-router';
 import LeftAside from '../Components/LeftAside';
 import Footer from '../pages/Footer';
+import RightSide from '../Components/RightSide';
 
 const HomeLayout = () => {
     return (
@@ -20,8 +21,9 @@ const HomeLayout = () => {
                 </main>
 
                 {/* right side */}
-                <div className=" col-span-3">
+                <div className=" col-span-3 sticky top-0 h-fit">
                     <h1 className='font-bold text-xl'>Login With</h1>
+                    <RightSide></RightSide>
                 </div>
             </div>
             <Footer></Footer>
