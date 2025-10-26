@@ -1,0 +1,30 @@
+[
+    {
+        "categoryId": 0,
+        "categoryName": "All Toys"
+    },
+    {
+        "categoryId": 1,
+        "categoryName": "Building Blocks"
+    },
+    {
+        "categoryId": 2,
+        "categoryName": "Vehicles"
+    },
+    {
+        "categoryId": 3,
+        "categoryName": "Dolls"
+    },
+    {
+        "categoryId": 4,
+        "categoryName": "Educational Toys"
+    },
+    {
+        "categoryId": 5,
+        "categoryName": "Action Figures"
+    },
+    {
+        "categoryId": 6,
+        "categoryName": "Soft Toys"
+    }
+]

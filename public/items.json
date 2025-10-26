@@ -1,0 +1,482 @@
+[
+    {
+        "toyId": 1,
+        "categoryId": 1,
+        "toyName": "Lego Classic Bricks",
+        "sellerName": "Toys R Us Local",
+        "sellerEmail": "contact@toysruslocal.com",
+        "price": 49.99,
+        "availableQuantity": 75,
+        "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
+        "pictureURL": "https://www.lego.com/cdn/cs/set/assets/blt5c961fa3e9b716ec/10698.jpg",
+        "subCategory": "Building Blocks",
+        "rating": {
+            "number": 3,
+            "badge": "trending"
+        }
+    },
+    {
+        "toyId": 2,
+        "categoryId": 1,
+        "toyName": "Mega Bloks First Builders Set",
+        "sellerName": "Little Hands Toys",
+        "sellerEmail": "hello@littlehands.com",
+        "price": 34.99,
+        "availableQuantity": 50,
+        "description": "Large colorful blocks perfect for toddlers to stack and play.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2014/12/16/22/25/blocks-570056_1280.jpg",
+        "subCategory": "Building Blocks",
+        "rating": {
+            "number": 4.5,
+            "badge": "hot"
+        }
+    },
+    {
+        "toyId": 3,
+        "categoryId": 1,
+        "toyName": "Wooden Building Blocks",
+        "sellerName": "Eco Playhouse",
+        "sellerEmail": "eco@playhouse.com",
+        "price": 27.99,
+        "availableQuantity": 60,
+        "description": "Sustainably made wooden blocks to build towers and cities.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2017/06/23/19/49/building-blocks-2435488_1280.jpg",
+        "subCategory": "Building Blocks",
+        "rating": {
+            "number": 4.8,
+            "badge": "popular"
+        }
+    },
+    {
+        "toyId": 4,
+        "categoryId": 1,
+        "toyName": "Magnetic Tiles Set",
+        "sellerName": "Tiny Genius",
+        "sellerEmail": "info@tinygenius.com",
+        "price": 59.99,
+        "availableQuantity": 40,
+        "description": "Magnetic construction tiles that let kids build 3D models easily.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2020/11/05/16/44/magnets-5715761_1280.jpg",
+        "subCategory": "Building Blocks",
+        "rating": {
+            "number": 4.9,
+            "badge": "trending"
+        }
+    },
+    {
+        "toyId": 5,
+        "categoryId": 1,
+        "toyName": "Stackable Rainbow Blocks",
+        "sellerName": "Happy Kids",
+        "sellerEmail": "sales@happykids.com",
+        "price": 24.99,
+        "availableQuantity": 90,
+        "description": "Vibrant rainbow-colored blocks for endless creative play.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2016/11/19/10/30/rainbow-1835365_1280.jpg",
+        "subCategory": "Building Blocks",
+        "rating": {
+            "number": 4.6,
+            "badge": "new"
+        }
+    },
+    {
+        "toyId": 6,
+        "categoryId": 2,
+        "toyName": "Hot Wheels Race Car",
+        "sellerName": "Speedy Toys",
+        "sellerEmail": "fast@speedytoys.com",
+        "price": 9.99,
+        "availableQuantity": 120,
+        "description": "A sleek mini race car with durable metal body and cool design.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2017/06/20/21/27/toy-car-2426823_1280.jpg",
+        "subCategory": "Vehicles",
+        "rating": {
+            "number": 4.4,
+            "badge": "popular"
+        }
+    },
+    {
+        "toyId": 7,
+        "categoryId": 2,
+        "toyName": "Remote Control Jeep",
+        "sellerName": "FunMotion",
+        "sellerEmail": "support@funmotion.com",
+        "price": 59.99,
+        "availableQuantity": 35,
+        "description": "A powerful RC jeep that runs smoothly on all terrains.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2016/11/23/14/39/rc-car-1850888_1280.jpg",
+        "subCategory": "Vehicles",
+        "rating": {
+            "number": 4.8,
+            "badge": "hot"
+        }
+    },
+    {
+        "toyId": 8,
+        "categoryId": 2,
+        "toyName": "Fire Truck with Ladder",
+        "sellerName": "City Heroes",
+        "sellerEmail": "hello@cityheroes.com",
+        "price": 39.99,
+        "availableQuantity": 70,
+        "description": "Bright red fire truck toy with extendable ladder and sounds.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2017/12/29/11/36/fire-truck-3042254_1280.jpg",
+        "subCategory": "Vehicles",
+        "rating": {
+            "number": 4.5,
+            "badge": "trending"
+        }
+    },
+    {
+        "toyId": 9,
+        "categoryId": 2,
+        "toyName": "Mini Construction Trucks Set",
+        "sellerName": "BuildIt",
+        "sellerEmail": "contact@buildit.com",
+        "price": 24.99,
+        "availableQuantity": 85,
+        "description": "Set of 4 mini construction vehicles: bulldozer, dump truck, and more.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2018/03/11/09/09/construction-3217686_1280.jpg",
+        "subCategory": "Vehicles",
+        "rating": {
+            "number": 4.3,
+            "badge": "new"
+        }
+    },
+    {
+        "toyId": 10,
+        "categoryId": 2,
+        "toyName": "Pull Back Police Car",
+        "sellerName": "KidDrive",
+        "sellerEmail": "sales@kiddrive.com",
+        "price": 12.49,
+        "availableQuantity": 65,
+        "description": "Pull-back police car toy with flashing lights and sound effects.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2016/12/27/21/25/police-car-1938288_1280.jpg",
+        "subCategory": "Vehicles",
+        "rating": {
+            "number": 4.6,
+            "badge": "popular"
+        }
+    },
+    {
+        "toyId": 11,
+        "categoryId": 3,
+        "toyName": "Barbie Dream Doll",
+        "sellerName": "Lovely Dolls",
+        "sellerEmail": "info@lovelydolls.com",
+        "price": 29.99,
+        "availableQuantity": 60,
+        "description": "Beautiful Barbie doll with pink outfit and accessories.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2015/12/07/10/57/barbie-1080575_1280.jpg",
+        "subCategory": "Dolls",
+        "rating": {
+            "number": 4.5,
+            "badge": "trending"
+        }
+    },
+    {
+        "toyId": 12,
+        "categoryId": 3,
+        "toyName": "Baby Alive Doll",
+        "sellerName": "KidJoy",
+        "sellerEmail": "help@kidjoy.com",
+        "price": 42.99,
+        "availableQuantity": 45,
+        "description": "Interactive doll that drinks, eats, and giggles like a real baby.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2016/12/28/21/35/doll-1938336_1280.jpg",
+        "subCategory": "Dolls",
+        "rating": {
+            "number": 4.7,
+            "badge": "hot"
+        }
+    },
+    {
+        "toyId": 13,
+        "categoryId": 3,
+        "toyName": "Handmade Rag Doll",
+        "sellerName": "CozyCrafts",
+        "sellerEmail": "hello@cozycrafts.com",
+        "price": 19.99,
+        "availableQuantity": 80,
+        "description": "Soft handmade rag doll made from organic cotton fabric.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2014/12/10/10/34/doll-562913_1280.jpg",
+        "subCategory": "Dolls",
+        "rating": {
+            "number": 4.9,
+            "badge": "popular"
+        }
+    },
+    {
+        "toyId": 14,
+        "categoryId": 3,
+        "toyName": "Frozen Elsa Doll",
+        "sellerName": "Disney FunShop",
+        "sellerEmail": "sales@disneyfun.com",
+        "price": 54.99,
+        "availableQuantity": 40,
+        "description": "Beautiful Elsa doll with sparkly blue dress and singing feature.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2018/03/05/22/51/elsa-3203332_1280.jpg",
+        "subCategory": "Dolls",
+        "rating": {
+            "number": 4.8,
+            "badge": "new"
+        }
+    },
+    {
+        "toyId": 15,
+        "categoryId": 3,
+        "toyName": "Mini Doll Family Set",
+        "sellerName": "TinyWorld",
+        "sellerEmail": "tiny@world.com",
+        "price": 24.49,
+        "availableQuantity": 100,
+        "description": "Set of four small dolls perfect for dollhouse playtime.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2017/08/07/22/39/dolls-2608861_1280.jpg",
+        "subCategory": "Dolls",
+        "rating": {
+            "number": 4.4,
+            "badge": "trending"
+        }
+    },
+    {
+        "toyId": 16,
+        "categoryId": 4,
+        "toyName": "Alphabet Learning Puzzle",
+        "sellerName": "EduToys",
+        "sellerEmail": "info@edutoys.com",
+        "price": 19.99,
+        "availableQuantity": 80,
+        "description": "Wooden alphabet puzzle for early learning.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2016/11/29/04/23/letters-1869187_1280.jpg",
+        "subCategory": "Educational Toys",
+        "rating": {
+            "number": 4.6,
+            "badge": "hot"
+        }
+    },
+    {
+        "toyId": 17,
+        "categoryId": 4,
+        "toyName": "Math Blocks Set",
+        "sellerName": "BrainyBox",
+        "sellerEmail": "help@brainybox.com",
+        "price": 22.99,
+        "availableQuantity": 70,
+        "description": "Colorful number blocks to teach counting and addition.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2017/03/02/20/58/numbers-2110987_1280.jpg",
+        "subCategory": "Educational Toys",
+        "rating": {
+            "number": 4.7,
+            "badge": "popular"
+        }
+    },
+    {
+        "toyId": 18,
+        "categoryId": 4,
+        "toyName": "Shape Sorting Cube",
+        "sellerName": "SmartKid",
+        "sellerEmail": "info@smartkid.com",
+        "price": 25.99,
+        "availableQuantity": 60,
+        "description": "Wooden cube with multiple shape holes for sorting fun.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2018/03/22/15/04/shapes-3243221_1280.jpg",
+        "subCategory": "Educational Toys",
+        "rating": {
+            "number": 4.5,
+            "badge": "new"
+        }
+    },
+    {
+        "toyId": 19,
+        "categoryId": 4,
+        "toyName": "Science Experiment Kit",
+        "sellerName": "YoungLab",
+        "sellerEmail": "support@younglab.com",
+        "price": 39.99,
+        "availableQuantity": 55,
+        "description": "STEM experiment kit for curious kids to learn basic chemistry.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2015/10/01/21/37/experiment-967935_1280.jpg",
+        "subCategory": "Educational Toys",
+        "rating": {
+            "number": 4.9,
+            "badge": "trending"
+        }
+    },
+    {
+        "toyId": 20,
+        "categoryId": 4,
+        "toyName": "Solar Robot Kit",
+        "sellerName": "STEM Pro",
+        "sellerEmail": "sales@stempro.com",
+        "price": 44.99,
+        "availableQuantity": 40,
+        "description": "DIY solar-powered robot for kids to assemble and play.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2019/10/17/14/44/robot-4556396_1280.jpg",
+        "subCategory": "Educational Toys",
+        "rating": {
+            "number": 4.8,
+            "badge": "hot"
+        }
+    },
+    {
+        "toyId": 21,
+        "categoryId": 5,
+        "toyName": "Spider-Man Figure",
+        "sellerName": "HeroWorld",
+        "sellerEmail": "hero@world.com",
+        "price": 34.99,
+        "availableQuantity": 65,
+        "description": "Detailed Spider-Man figure with articulated limbs.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2015/07/02/10/28/spiderman-828164_1280.jpg",
+        "subCategory": "Action Figures",
+        "rating": {
+            "number": 4.8,
+            "badge": "new"
+        }
+    },
+    {
+        "toyId": 22,
+        "categoryId": 5,
+        "toyName": "Batman Figure",
+        "sellerName": "HeroWorld",
+        "sellerEmail": "hero@world.com",
+        "price": 32.99,
+        "availableQuantity": 60,
+        "description": "Highly detailed Batman figure with cape and stand.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2017/01/31/13/14/batman-2022521_1280.jpg",
+        "subCategory": "Action Figures",
+        "rating": {
+            "number": 4.6,
+            "badge": "trending"
+        }
+    },
+    {
+        "toyId": 23,
+        "categoryId": 5,
+        "toyName": "Iron Man Mark 50",
+        "sellerName": "Marvel Toys",
+        "sellerEmail": "marvel@toystore.com",
+        "price": 44.99,
+        "availableQuantity": 45,
+        "description": "Premium Iron Man action figure from Avengers series.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2019/05/08/13/44/ironman-4189064_1280.jpg",
+        "subCategory": "Action Figures",
+        "rating": {
+            "number": 4.9,
+            "badge": "popular"
+        }
+    },
+    {
+        "toyId": 24,
+        "categoryId": 5,
+        "toyName": "Captain America Figure",
+        "sellerName": "Marvel Toys",
+        "sellerEmail": "marvel@toystore.com",
+        "price": 39.99,
+        "availableQuantity": 50,
+        "description": "Captain America action figure with shield and base stand.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2020/03/03/20/23/captain-america-4897693_1280.jpg",
+        "subCategory": "Action Figures",
+        "rating": {
+            "number": 4.8,
+            "badge": "hot"
+        }
+    },
+    {
+        "toyId": 25,
+        "categoryId": 5,
+        "toyName": "Hulk Smash Figure",
+        "sellerName": "SuperToys",
+        "sellerEmail": "sales@supertoys.com",
+        "price": 42.49,
+        "availableQuantity": 40,
+        "description": "Strong Hulk figure with realistic smashing pose.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2017/10/19/21/18/hulk-2869498_1280.jpg",
+        "subCategory": "Action Figures",
+        "rating": {
+            "number": 4.7,
+            "badge": "new"
+        }
+    },
+    {
+        "toyId": 26,
+        "categoryId": 5,
+        "toyName": "Black Panther Figure",
+        "sellerName": "SuperToys",
+        "sellerEmail": "sales@supertoys.com",
+        "price": 37.99,
+        "availableQuantity": 55,
+        "description": "Detailed Black Panther figure with Vibranium claws.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2020/06/16/15/14/black-panther-5306154_1280.jpg",
+        "subCategory": "Action Figures",
+        "rating": {
+            "number": 4.9,
+            "badge": "popular"
+        }
+    },
+    {
+        "toyId": 27,
+        "categoryId": 6,
+        "toyName": "Teddy Bear Classic",
+        "sellerName": "Softies",
+        "sellerEmail": "support@softies.com",
+        "price": 24.99,
+        "availableQuantity": 100,
+        "description": "Fluffy brown teddy bear with soft fur and bow tie.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2014/12/15/13/40/teddy-bear-569900_1280.jpg",
+        "subCategory": "Soft Toys",
+        "rating": {
+            "number": 4.8,
+            "badge": "trending"
+        }
+    },
+    {
+        "toyId": 28,
+        "categoryId": 6,
+        "toyName": "Cute Bunny Plush",
+        "sellerName": "CuddleWorld",
+        "sellerEmail": "info@cuddleworld.com",
+        "price": 19.99,
+        "availableQuantity": 80,
+        "description": "Adorable bunny plush with floppy ears and soft cotton.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2018/03/29/15/40/rabbit-3270997_1280.jpg",
+        "subCategory": "Soft Toys",
+        "rating": {
+            "number": 4.7,
+            "badge": "hot"
+        }
+    },
+    {
+        "toyId": 29,
+        "categoryId": 6,
+        "toyName": "Elephant Plush Toy",
+        "sellerName": "SnuggleCo",
+        "sellerEmail": "hello@snuggleco.com",
+        "price": 22.99,
+        "availableQuantity": 75,
+        "description": "Soft gray elephant plush toy perfect for bedtime cuddles.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2016/11/29/12/54/elephant-1869724_1280.jpg",
+        "subCategory": "Soft Toys",
+        "rating": {
+            "number": 4.6,
+            "badge": "new"
+        }
+    },
+    {
+        "toyId": 30,
+        "categoryId": 6,
+        "toyName": "Panda Plush Toy",
+        "sellerName": "SnuggleCo",
+        "sellerEmail": "hello@snuggleco.com",
+        "price": 26.99,
+        "availableQuantity": 65,
+        "description": "Cute panda plush toy with huggable softness and charm.",
+        "pictureURL": "https://cdn.pixabay.com/photo/2014/12/15/13/39/panda-569901_1280.jpg",
+        "subCategory": "Soft Toys",
+        "rating": {
+            "number": 4.9,
+            "badge": "popular"
+        }
+    }
+]
