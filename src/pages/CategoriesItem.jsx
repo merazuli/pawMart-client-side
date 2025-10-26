@@ -21,7 +21,7 @@ const CategoriesItem = () => {
 
     }, [data, id])
 
-    console.log(categoryItems)
+    // console.log(categoryItems)
     return (
         <div>
             <h2 className="font-bold mb-5">

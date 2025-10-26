@@ -19,14 +19,17 @@ const router = createBrowserRouter([
                 loader: () => fetch("/items.json"),
 
             },
-            {
-                path: '/toy-details/:id',
-                loader: () => fetch("/items.json"),
-                Component: toyDetails,
-            }
+
         ]
 
+    },
+    {
+        path: '/toy-details/:id',
+        Component: toyDetails,
+        loader: () => fetch("/items.json"),
     }
+
+
 ])
 
 export default router;

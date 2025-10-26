@@ -12,8 +12,8 @@ const Navbar = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <Link to="/"><a>Home</a></Link>
-                        <Link to="/about-us"><a>About Us</a></Link>
+                        <Link to="/">Home</Link>
+                        <Link to="/about-us">About Us</Link>
                     </ul>
                 </div>
                 <a className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
@@ -23,8 +23,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal  px-1">
-                    <Link className='mr-10' to="/"><a>Home</a></Link>
-                    <Link to="/about-us"><a>About Us</a></Link>
+                    <Link className='mr-10' to="/">Home</Link>
+                    <Link to="/about-us">About Us</Link>
                 </ul>
             </div>
             <div className="navbar-end">

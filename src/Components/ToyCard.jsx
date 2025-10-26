@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 const ToyCard = ({ item }) => {
-    const { rating, description, price, sellerEmail, toyId } = item;
+    const { rating, description, price, toyId } = item;
     return (
         <div className="card bg-base-100  shadow-sm">
             <figure>
@@ -26,7 +26,6 @@ const ToyCard = ({ item }) => {
                     </div>
                 </div>
                 <div className="card-actions justify-center">
-                    {/* <p>Seller-Email:<span className='font-bold ml-2'>{sellerEmail}</span></p> */}
                     <Link to={`/toy-details/${toyId}`} className='btn px-3 py-2 hover:bg-yellow-400'>View Details</Link>
                 </div>
             </div>
