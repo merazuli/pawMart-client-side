@@ -2,10 +2,13 @@ import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layout/HomeLayout";
 import Home from "../pages/Home";
 import CategoriesItem from "../pages/CategoriesItem";
-import toyDetails from "../pages/toyDetails";
 import AuthLayout from "../layout/AuthLayout";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
+import PrivateRoute from "../provider/PrivateRoute";
+import ToyDetails from "../pages/toyDetails";
+import AboutUsPage from "../pages/AboutUsPage";
+import ContactUs from "../pages/ContactUs";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +25,14 @@ const router = createBrowserRouter([
                 loader: () => fetch("/items.json"),
 
             },
+            {
+                path: "/about-us",
+                Component: AboutUsPage,
+            },
+            {
+                path: "/contact-us",
+                Component: ContactUs,
+            }
 
         ]
 
@@ -43,7 +54,9 @@ const router = createBrowserRouter([
     },
     {
         path: '/toy-details/:id',
-        Component: toyDetails,
+        element: <PrivateRoute>
+            <ToyDetails></ToyDetails>
+        </PrivateRoute>,
         loader: () => fetch("/items.json"),
     },
     {

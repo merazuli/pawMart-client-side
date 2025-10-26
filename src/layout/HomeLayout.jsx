@@ -4,11 +4,14 @@ import { Outlet } from 'react-router';
 import LeftAside from '../Components/LeftAside';
 import Footer from '../pages/Footer';
 import RightSide from '../Components/RightSide';
+import Banner from '../Components/Banner';
+
 
 const HomeLayout = () => {
     return (
         <div className=''>
             <Navbar></Navbar>
+            <Banner></Banner>
             <div className='grid grid-cols-12 w-11/12 mx-auto gap-5 mt-5'>
                 {/* left side  */}
                 <aside className="col-span-2 sticky top-0 h-fit">

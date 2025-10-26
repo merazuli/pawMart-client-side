@@ -1,25 +1,29 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 
 const LoginPage = () => {
     const { handleLogin, setUser } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate()
+    // console.log(location, navigate)
 
     const loginHandle = (e) => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-
+        console.log(email, password)
         handleLogin(email, password)
             .then(result => {
                 const user = result.user;
                 setUser(user);
                 toast.success("Login Success")
+                navigate(`${location.state ? location.state : "/"}`)
             })
             .catch(error => {
-                toast.error(error.code)
+                toast.error(error)
             })
     }
     return (
