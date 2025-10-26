@@ -29,7 +29,7 @@ const CategoriesItem = () => {
                 Found
             </h2>
 
-            <div className='grid lg:grid-cols-4 gap-5'>
+            <div className='grid lg:grid-cols-4 gap-2'>
                 {
                     categoryItems.map(item => <ToyCard key={item.toyId} item={item}></ToyCard>)
                 }

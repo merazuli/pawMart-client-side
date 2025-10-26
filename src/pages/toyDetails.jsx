@@ -10,10 +10,10 @@ const ToyDetails = () => {
 
     const [toy, setToy] = useState([]);
 
-    console.log(toy)
+    // console.log(toy)
 
     useEffect(() => {
-        const filteredData = data.filter(singleData => singleData.toyId == id)
+        const filteredData = data.find(singleData => singleData.toyId == id)
         setToy(filteredData)
 
     }, [data, id])
@@ -21,8 +21,9 @@ const ToyDetails = () => {
     return (
         <div className=''>
             <Navbar></Navbar>
-            <div className='grid grid-cols-12 w-11/12 mx-auto'>
-                <main className='col-span-9'>
+            <div className='grid grid-cols-12 w-11/12 mx-auto gap-10 '>
+                <main className='col-span-9 '>
+                    <h1 className='text-xl font-bold text-center my-5'>Toy Item</h1>
                     <ToyDetailsCard toy={toy}></ToyDetailsCard>
                 </main>
                 <aside className='col-span-3'>

@@ -1,0 +1,83 @@
+import React, { createContext, useEffect, useState } from 'react';
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { app } from '../firebase/firebase.init';
+
+
+
+
+const auth = getAuth(app);
+
+// googleProvider 
+
+const googleProvider = new GoogleAuthProvider();
+
+// create context for all component declare 
+export const AuthContext = createContext();
+
+const AuthProvider = ({ children }) => {
+    const [user, setUser] = useState(null);
+
+    // // user create 
+    const createUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+
+
+    //    see current user 
+
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser)
+        })
+        return (() => {
+            unSubscribe()
+        })
+
+    }, [])
+
+    // login user 
+
+    const handleLogin = (email, password) => {
+
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+    // log out user 
+
+    const logOutUser = () => {
+        signOut(auth);
+    }
+
+    // sign in google 
+
+    const googleSignIn = () => {
+        return signInWithPopup(auth, googleProvider)
+    }
+
+
+
+
+
+
+
+
+
+    // pass data 
+    const authData = {
+        user,
+        createUser,
+        setUser,
+        logOutUser,
+        handleLogin,
+        googleSignIn,
+    }
+
+
+    return (<AuthContext value={authData}>{children}</AuthContext>);
+
+
+
+
+};
+
+export default AuthProvider;

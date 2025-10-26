@@ -22,7 +22,7 @@ const ToyCard = ({ item }) => {
                     ))}
                     <div className='flex items-center '>
                         <span className="ml-2 text-gray-600">{rating.number}</span>
-                        <p className='ml-10  text-black'>Price: <span className='font-bold'>{price}</span> </p>
+                        <p className='ml-5  text-black'>Price: <span className='font-bold'>{price}</span> </p>
                     </div>
                 </div>
                 <div className="card-actions justify-center">

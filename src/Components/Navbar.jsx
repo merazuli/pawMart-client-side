@@ -1,7 +1,25 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router';
+import { AuthContext } from '../provider/AuthProvider';
+import { toast } from 'react-toastify';
+import userIcon from "../assets/user.png"
 
 const Navbar = () => {
+    const { user, setUser, logOutUser } = useContext(AuthContext);
+    console.log(user)
+
+    const handleLogout = () => {
+        logOutUser()
+            .then(() => {
+                alert('log out ');
+                setUser(null)
+            })
+            .catch(error => {
+                toast.error(error.code)
+            })
+    }
+
     return (
         <div className="navbar bg-base-100 shadow-sm px-10">
             <div className="navbar-start">
@@ -27,8 +45,9 @@ const Navbar = () => {
                     <Link to="/about-us">About Us</Link>
                 </ul>
             </div>
-            <div className="navbar-end">
-
+            <div className="navbar-end gap-5">
+                <img className="w-10 rounded-full" src={`${user ? user.photoURL : userIcon}`} alt="" title={user?.displayName || user?.email || "Guest User"} />
+                {user ? <button onClick={handleLogout} className='btn'>Log Out</button> : <Link to="/auth/login" className='btn'>Login</Link>}
             </div>
         </div>
     );
