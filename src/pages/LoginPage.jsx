@@ -1,12 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const LoginPage = () => {
-    const { handleLogin, setUser } = useContext(AuthContext);
+    const { handleLogin, setUser, forget } = useContext(AuthContext);
+    const emailRef = useRef()
     const location = useLocation();
     const navigate = useNavigate()
+
+    // show password 
+
+    const [show, setShow] = useState(false)
     // console.log(location, navigate)
 
     const loginHandle = (e) => {
@@ -18,14 +24,32 @@ const LoginPage = () => {
         handleLogin(email, password)
             .then(result => {
                 const user = result.user;
-                setUser(user);
                 toast.success("Login Success")
+                setUser(user);
+                if (!user.emailVerified) {
+                    toast('please verify your email address')
+                    return
+                }
                 navigate(`${location.state ? location.state : "/"}`)
             })
             .catch(error => {
-                toast.error(error)
+                toast.error("please inter valid password")
             })
     }
+    // forget password 
+    const handleForgetPassword = (e) => {
+        const email = emailRef.current.value;
+        console.log(email)
+        e.preventDefault()
+        forget(email)
+            .then(() => {
+                toast('please check your email ')
+            })
+            .catch((error) => {
+                toast.error(error)
+            });
+    }
+
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="card w-full max-w-md bg-purple-50 rounded-3xl shadow-2xl p-8">
@@ -40,28 +64,26 @@ const LoginPage = () => {
                         <label className="mb-1 font-semibold text-gray-700">Email</label>
                         <input
                             type="email" name='email'
-                            placeholder="Your Email"
+                            placeholder="Your Email" ref={emailRef}
                             className="input  w-full border-purple-300 focus:border-purple-500 focus:ring focus:ring-purple-200 transition"
                         />
                     </div>
 
                     {/* Password */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col relative">
                         <label className="mb-1 font-semibold text-gray-700">Password</label>
                         <input
-                            type="password"
+                            type={show ? "text" : "password"}
                             placeholder="Password" name="password"
                             className="input  w-full border-purple-300 focus:border-purple-500 focus:ring focus:ring-purple-200 transition"
                         />
+                        <span onClick={() => setShow(!show)} className='absolute right-5 top-10'>
+                            {show ? <FaEyeSlash /> : <FaEye />}</span>
                     </div>
 
-                    {/* Links */}
-                    <div className="flex justify-between items-center text-md">
+                    <div onClick={handleForgetPassword}><a href="" className='link link-hover'>Forget Password?</a> </div>
 
-                        <p className="  hover:text-purple-700 ">
-                            Don't have an account? <Link to="/auth/register" className='font-bold text-red-600'>Register</Link>
-                        </p>
-                    </div>
+
 
                     {/* Submit Button */}
                     <button
@@ -70,6 +92,14 @@ const LoginPage = () => {
                     >
                         Login
                     </button>
+
+                    {/* Links */}
+                    <div className="flex justify-between items-center text-md">
+
+                        <p className="  hover:text-purple-700 ">
+                            Don't have an account? <Link to="/auth/register" className='font-bold text-red-600'>Register</Link>
+                        </p>
+                    </div>
                 </form>
             </div>
             <ToastContainer />

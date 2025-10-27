@@ -23,7 +23,7 @@ const CategoriesItem = () => {
 
     // console.log(categoryItems)
     return (
-        <div>
+        <div className=''>
             <h2 className="font-bold mb-5">
                 Total <span className="text-secondary">{categoryItems.length}</span> news
                 Found

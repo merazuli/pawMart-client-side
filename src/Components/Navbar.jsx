@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import userIcon from "../assets/user.png"
 
 const Navbar = () => {
@@ -12,13 +12,25 @@ const Navbar = () => {
     const handleLogout = () => {
         logOutUser()
             .then(() => {
-                // setUser(null)
-                toast.success("Log Out Success")
+                toast.success("Successfully Logged Out!");
+                setUser(null);
             })
             .catch(error => {
-                toast.error(error.code)
-            })
-    }
+                toast.error(`Logout Failed: ${error.code}`);
+            });
+    };
+
+
+    // const handleLogout = () => {
+    //     logOutUser()
+    //         .then(() => {
+    //             alert("Log Out Success")
+    //             setUser(null)
+    //         })
+    //         .catch(error => {
+    //             toast.error(error.code)
+    //         })
+    // }
 
     return (
         <div className="navbar bg-base-100 shadow-sm px-10">
@@ -60,6 +72,7 @@ const Navbar = () => {
                 {/* <img className="w-20 rounded-full" src={`${user ? user.photoURL : userIcon}`} alt="" title={user?.displayName || user?.email || "Guest User"} /> */}
                 {user ? <button onClick={handleLogout} className='btn'>Log Out</button> : <Link to="/auth/login" className='btn'>Login</Link>}
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
