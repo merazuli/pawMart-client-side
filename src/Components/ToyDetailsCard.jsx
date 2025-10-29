@@ -20,7 +20,7 @@ const ToyDetailsCard = ({ toy }) => {
             {/* Image */}
             <figure className="relative">
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    src={toy.pictureURL}
                     alt={toyName}
                     className="w-full h-72 object-cover"
                 />

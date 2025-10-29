@@ -14,17 +14,17 @@ const HomeLayout = () => {
             <Banner></Banner>
             <div className='grid grid-cols-12 w-11/12 mx-auto gap-5 mt-5'>
                 {/* left side  */}
-                <aside className="col-span-2 sticky top-0 h-fit">
+                <aside className="lg:col-span-2 col-span-12  lg:sticky top-0 h-fit">
                     <h1 className='font-bold text-xl'>Category</h1>
                     <LeftAside></LeftAside>
                 </aside>
                 {/* main Section  */}
-                <main className='col-span-7'>
+                <main className='lg:col-span-7 col-span-12'>
                     <Outlet></Outlet>
                 </main>
 
                 {/* right side */}
-                <div className=" col-span-3 sticky top-0 h-fit">
+                <div className=" lg:col-span-3 lg:sticky top-0 h-fit col-span-12">
                     <h1 className='font-bold text-xl'>Login With</h1>
                     <RightSide></RightSide>
                 </div>

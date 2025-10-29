@@ -2,6 +2,6 @@
 @plugin "daisyui";
 
 a.active {
-    text-decoration: underline;
-    color: blueviolet;
+    background-color: red;
+    color: white;
 }

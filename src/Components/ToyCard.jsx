@@ -5,11 +5,10 @@ import { Link } from 'react-router';
 const ToyCard = ({ item }) => {
     const { rating, description, price, toyId } = item;
     return (
-        <div className="card bg-base-100  shadow-sm">
+        <div className="card bg-base-100  shadow-sm hover:scale-105 ease-in-out transition">
             <figure>
-                <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
+                <img className='h-[150px]'
+                    src={item.pictureURL} />
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{item.toyName}

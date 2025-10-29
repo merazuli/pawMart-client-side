@@ -8,7 +8,7 @@
         "price": 49.99,
         "availableQuantity": 75,
         "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving.",
-        "pictureURL": "https://www.lego.com/cdn/cs/set/assets/blt5c961fa3e9b716ec/10698.jpg",
+        "pictureURL": "https://i.ibb.co.com/TBDq6xQg/lego-classic-brik.jpg",
         "subCategory": "Building Blocks",
         "rating": {
             "number": 3,
@@ -24,7 +24,7 @@
         "price": 34.99,
         "availableQuantity": 50,
         "description": "Large colorful blocks perfect for toddlers to stack and play.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2014/12/16/22/25/blocks-570056_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/N2RBw52H/Mega-Bloks-First-Builders-Set.jpg",
         "subCategory": "Building Blocks",
         "rating": {
             "number": 4.5,
@@ -40,7 +40,7 @@
         "price": 27.99,
         "availableQuantity": 60,
         "description": "Sustainably made wooden blocks to build towers and cities.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2017/06/23/19/49/building-blocks-2435488_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/snXmsCG/Wooden-Building-Blocks.jpg",
         "subCategory": "Building Blocks",
         "rating": {
             "number": 4.8,
@@ -56,7 +56,7 @@
         "price": 59.99,
         "availableQuantity": 40,
         "description": "Magnetic construction tiles that let kids build 3D models easily.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2020/11/05/16/44/magnets-5715761_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/7Jzp6WqT/Magnetic-Tiles-Set.webp",
         "subCategory": "Building Blocks",
         "rating": {
             "number": 4.9,
@@ -72,7 +72,7 @@
         "price": 24.99,
         "availableQuantity": 90,
         "description": "Vibrant rainbow-colored blocks for endless creative play.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2016/11/19/10/30/rainbow-1835365_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/6J1ZjsrV/Stackable-Rainbow-Blocks.jpg",
         "subCategory": "Building Blocks",
         "rating": {
             "number": 4.6,
@@ -88,7 +88,7 @@
         "price": 9.99,
         "availableQuantity": 120,
         "description": "A sleek mini race car with durable metal body and cool design.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2017/06/20/21/27/toy-car-2426823_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/cc6CHPdX/Hot-Wheels-Race-Car.jpg",
         "subCategory": "Vehicles",
         "rating": {
             "number": 4.4,
@@ -104,7 +104,7 @@
         "price": 59.99,
         "availableQuantity": 35,
         "description": "A powerful RC jeep that runs smoothly on all terrains.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2016/11/23/14/39/rc-car-1850888_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/ZRgMGWv8/Remote-Control-Jeep.jpg",
         "subCategory": "Vehicles",
         "rating": {
             "number": 4.8,
@@ -120,7 +120,7 @@
         "price": 39.99,
         "availableQuantity": 70,
         "description": "Bright red fire truck toy with extendable ladder and sounds.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2017/12/29/11/36/fire-truck-3042254_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/BVL6B1Vg/Fire-Truck-with-Ladder.jpg",
         "subCategory": "Vehicles",
         "rating": {
             "number": 4.5,
@@ -136,7 +136,7 @@
         "price": 24.99,
         "availableQuantity": 85,
         "description": "Set of 4 mini construction vehicles: bulldozer, dump truck, and more.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2018/03/11/09/09/construction-3217686_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/pBBM3GhC/Mini-Construction-Trucks-Set.jpg",
         "subCategory": "Vehicles",
         "rating": {
             "number": 4.3,
@@ -152,7 +152,7 @@
         "price": 12.49,
         "availableQuantity": 65,
         "description": "Pull-back police car toy with flashing lights and sound effects.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2016/12/27/21/25/police-car-1938288_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/S41VRWsX/Pull-Back-Police-Car.jpg",
         "subCategory": "Vehicles",
         "rating": {
             "number": 4.6,
@@ -168,7 +168,7 @@
         "price": 29.99,
         "availableQuantity": 60,
         "description": "Beautiful Barbie doll with pink outfit and accessories.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2015/12/07/10/57/barbie-1080575_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/j9C4QQXd/Barbie-Dream-Doll.jpg",
         "subCategory": "Dolls",
         "rating": {
             "number": 4.5,
@@ -184,7 +184,7 @@
         "price": 42.99,
         "availableQuantity": 45,
         "description": "Interactive doll that drinks, eats, and giggles like a real baby.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2016/12/28/21/35/doll-1938336_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/fzgRRKRT/Baby-Alive-Doll.jpg",
         "subCategory": "Dolls",
         "rating": {
             "number": 4.7,
@@ -200,7 +200,7 @@
         "price": 19.99,
         "availableQuantity": 80,
         "description": "Soft handmade rag doll made from organic cotton fabric.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2014/12/10/10/34/doll-562913_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/MkZ4bbbJ/Handmade-Rag-Doll.jpg",
         "subCategory": "Dolls",
         "rating": {
             "number": 4.9,
@@ -216,7 +216,7 @@
         "price": 54.99,
         "availableQuantity": 40,
         "description": "Beautiful Elsa doll with sparkly blue dress and singing feature.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2018/03/05/22/51/elsa-3203332_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/wZCwKQdh/Frozen-Elsa-Doll.jpg",
         "subCategory": "Dolls",
         "rating": {
             "number": 4.8,
@@ -232,7 +232,7 @@
         "price": 24.49,
         "availableQuantity": 100,
         "description": "Set of four small dolls perfect for dollhouse playtime.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2017/08/07/22/39/dolls-2608861_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/FbQs5pj5/Mini-Doll-Family-Set.jpg",
         "subCategory": "Dolls",
         "rating": {
             "number": 4.4,
@@ -248,7 +248,7 @@
         "price": 19.99,
         "availableQuantity": 80,
         "description": "Wooden alphabet puzzle for early learning.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2016/11/29/04/23/letters-1869187_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/rfZrZHyc/Alphabet-Learning-Puzzle.jpg",
         "subCategory": "Educational Toys",
         "rating": {
             "number": 4.6,
@@ -264,7 +264,7 @@
         "price": 22.99,
         "availableQuantity": 70,
         "description": "Colorful number blocks to teach counting and addition.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2017/03/02/20/58/numbers-2110987_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/m5h6yyQj/Math-Blocks-Set.webp",
         "subCategory": "Educational Toys",
         "rating": {
             "number": 4.7,
@@ -280,7 +280,7 @@
         "price": 25.99,
         "availableQuantity": 60,
         "description": "Wooden cube with multiple shape holes for sorting fun.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2018/03/22/15/04/shapes-3243221_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/ccScQ40b/Shape-Sorting-Cube.jpg",
         "subCategory": "Educational Toys",
         "rating": {
             "number": 4.5,
@@ -296,7 +296,7 @@
         "price": 39.99,
         "availableQuantity": 55,
         "description": "STEM experiment kit for curious kids to learn basic chemistry.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2015/10/01/21/37/experiment-967935_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/6c77DTrZ/Science-Experiment-Kit.jpg",
         "subCategory": "Educational Toys",
         "rating": {
             "number": 4.9,
@@ -312,7 +312,7 @@
         "price": 44.99,
         "availableQuantity": 40,
         "description": "DIY solar-powered robot for kids to assemble and play.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2019/10/17/14/44/robot-4556396_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/7tBqjLdH/Solar-Robot-Kit.jpg",
         "subCategory": "Educational Toys",
         "rating": {
             "number": 4.8,
@@ -328,7 +328,7 @@
         "price": 34.99,
         "availableQuantity": 65,
         "description": "Detailed Spider-Man figure with articulated limbs.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2015/07/02/10/28/spiderman-828164_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/jPH5qk3W/Spider-Man-Figure.jpg",
         "subCategory": "Action Figures",
         "rating": {
             "number": 4.8,
@@ -344,7 +344,7 @@
         "price": 32.99,
         "availableQuantity": 60,
         "description": "Highly detailed Batman figure with cape and stand.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2017/01/31/13/14/batman-2022521_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/SwhFkr2x/Batman-Figure.jpg",
         "subCategory": "Action Figures",
         "rating": {
             "number": 4.6,
@@ -360,7 +360,7 @@
         "price": 44.99,
         "availableQuantity": 45,
         "description": "Premium Iron Man action figure from Avengers series.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2019/05/08/13/44/ironman-4189064_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/FqyM32yy/Iron-Man-Mark-50.jpg",
         "subCategory": "Action Figures",
         "rating": {
             "number": 4.9,
@@ -376,7 +376,7 @@
         "price": 39.99,
         "availableQuantity": 50,
         "description": "Captain America action figure with shield and base stand.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2020/03/03/20/23/captain-america-4897693_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/PzDb6nrd/Captain-America-Figure.jpg",
         "subCategory": "Action Figures",
         "rating": {
             "number": 4.8,
@@ -392,7 +392,7 @@
         "price": 42.49,
         "availableQuantity": 40,
         "description": "Strong Hulk figure with realistic smashing pose.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2017/10/19/21/18/hulk-2869498_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/gLhLp40w/Hulk-Smash-Figure.jpg",
         "subCategory": "Action Figures",
         "rating": {
             "number": 4.7,
@@ -408,7 +408,7 @@
         "price": 37.99,
         "availableQuantity": 55,
         "description": "Detailed Black Panther figure with Vibranium claws.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2020/06/16/15/14/black-panther-5306154_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/bRj26xHB/Black-Panther-Figure.jpg",
         "subCategory": "Action Figures",
         "rating": {
             "number": 4.9,
@@ -424,7 +424,7 @@
         "price": 24.99,
         "availableQuantity": 100,
         "description": "Fluffy brown teddy bear with soft fur and bow tie.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2014/12/15/13/40/teddy-bear-569900_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/tT5Qj2my/02-11-300x300.jpg",
         "subCategory": "Soft Toys",
         "rating": {
             "number": 4.8,
@@ -440,7 +440,7 @@
         "price": 19.99,
         "availableQuantity": 80,
         "description": "Adorable bunny plush with floppy ears and soft cotton.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2018/03/29/15/40/rabbit-3270997_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/qLQzPfXg/Cute-Bunny-Plush.jpg",
         "subCategory": "Soft Toys",
         "rating": {
             "number": 4.7,
@@ -456,7 +456,7 @@
         "price": 22.99,
         "availableQuantity": 75,
         "description": "Soft gray elephant plush toy perfect for bedtime cuddles.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2016/11/29/12/54/elephant-1869724_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/whvY436b/Elephant-Plush-Toy.jpg",
         "subCategory": "Soft Toys",
         "rating": {
             "number": 4.6,
@@ -472,7 +472,7 @@
         "price": 26.99,
         "availableQuantity": 65,
         "description": "Cute panda plush toy with huggable softness and charm.",
-        "pictureURL": "https://cdn.pixabay.com/photo/2014/12/15/13/39/panda-569901_1280.jpg",
+        "pictureURL": "https://i.ibb.co.com/8LBMCdC5/Panda-Plush-Toy.jpg",
         "subCategory": "Soft Toys",
         "rating": {
             "number": 4.9,

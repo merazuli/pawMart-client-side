@@ -13,21 +13,22 @@ import LatestNews from './Latests';
 const images = [
     {
         id: 1,
-        url: 'https://i.ibb.co.com/KjQtJMjn/slide-3.jpg',
-        title: 'প্রাকৃতিক সৌন্দর্য',
-        description: 'সবুজ বনানী ও পাখির কলতান'
+        url: 'https://i.ibb.co.com/S41VRWsX/Pull-Back-Police-Car.jpg',
+        title: 'Pull-back police car toy with flashing lights and sound effects.',
+        description: 'Large colorful blocks perfect for toddlers to stack and play.'
+
     },
     {
         id: 2,
-        url: 'https://i.ibb.co.com/svFrhDTz/silde-4.jpg',
-        title: 'শহুরে জীবন',
-        description: 'গতিময় মহানগরীর ব্যস্ততা'
+        url: 'https://i.ibb.co.com/N2RBw52H/Mega-Bloks-First-Builders-Set.jpg',
+        title: 'Mega Bloks First Builders Set',
+        description: 'Large colorful blocks perfect for toddlers to stack and play.'
     },
     {
         id: 3,
-        url: 'https://i.ibb.co.com/nNPTMQWx/8.jpg',
-        title: 'শান্ত সৈকত',
-        description: 'নীল জলরাশি আর বালুকাময় বেলাভূমি'
+        url: 'https://i.ibb.co.com/cc6CHPdX/Hot-Wheels-Race-Car.jpg',
+        title: 'Hot Wheels Race Car',
+        description: 'A sleek mini race car with durable metal body and cool design.'
     },
 ];
 
@@ -39,36 +40,36 @@ const Banner = () => {
 
             <Swiper
                 modules={[Pagination, Navigation, Autoplay]}
-                spaceBetween={0} // ছবিতে গ্যাপ থাকবে না
+                spaceBetween={0}
                 slidesPerView={1}
                 navigation={true}
                 pagination={{ clickable: true }}
                 loop={true}
                 autoplay={{
-                    delay: 2000, // 2 সেকেন্ড পর পর স্লাইড হবে
+                    delay: 2000,
                     disableOnInteraction: false,
                 }}
-                style={{ height: '400px', '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }}
+                style={{ height: '600px', '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }}
             >
                 {images.map((image) => (
-                    <SwiperSlide key={image.id} style={{ position: 'relative' }}> {/* 🌟 স্লাইডটিকে relative করা হয়েছে */}
+                    <SwiperSlide key={image.id} style={{ position: 'relative' }}>
                         <img className='object-cover'
                             src={image.url}
                             alt={image.title}
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
-                        {/* 🌟 ছবির উপরে টেক্সট দেখানোর জন্য একটি কন্টেইনার */}
+
                         <div style={{
                             position: 'absolute',
-                            bottom: '200px', // ছবির নিচের দিকে
+                            bottom: '200px',
                             left: '0',
                             width: '100%',
                             color: 'white',
                             padding: '20px',
                             textAlign: 'center',
                         }}>
-                            <h3 style={{ margin: '0 0 10px 0', fontSize: '2em' }}>{image.title}</h3>
-                            <p style={{ margin: '0', fontSize: '1.2em' }}>{image.description}</p>
+                            <h3 className='text-green-600 text-3xl font-bold' style={{ margin: '0 0 10px 0', fontSize: '2em' }}>{image.title}</h3>
+                            <p className='text-amber-400' style={{ margin: '0', fontSize: '1.2em' }}>{image.description}</p>
                         </div>
                     </SwiperSlide>
                 ))}

@@ -1,12 +1,14 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import { sendEmailVerification } from 'firebase/auth';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const RegisterPage = () => {
     const { createUser, setUser, updateUserProfile, googleSignIn } = useContext(AuthContext);
+    const [show, setShow] = useState(false)
 
     const navigate = useNavigate()
     // handle login with google 
@@ -31,7 +33,14 @@ const RegisterPage = () => {
         const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        // console.log(photo, name)
+        if (password.length <= 6) {
+            toast.error("please enter 6 digit password")
+        }
+        if (!/[A-Z]/.test(password)) {
+            alert("Password must contain at least one uppercase letter.");
+            return;
+        }
+
 
         createUser(email, password)
             .then(result => {
@@ -95,13 +104,15 @@ const RegisterPage = () => {
                     </div>
 
                     {/* Password */}
-                    <div className="flex flex-col">
+                    <div className="flex flex-col relative">
                         <label className="mb-1 font-semibold text-gray-700">Password</label>
                         <input
-                            type="password"
-                            placeholder="Password" name="password"
+                            type={show ? "text" : "password"}
+                            placeholder="Your Password" name="password"
                             className="input  w-full border-purple-300 focus:border-purple-500 focus:ring focus:ring-purple-200 transition"
                         />
+                        <span onClick={() => setShow(!show)} className='absolute right-5 top-10'>
+                            {show ? <FaEyeSlash /> : <FaEye />}</span>
                     </div>
 
                     {/* Links */}
