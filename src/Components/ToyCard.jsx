@@ -25,7 +25,7 @@ const ToyCard = ({ item }) => {
                     </div>
                 </div>
                 <div className="card-actions justify-center">
-                    <Link to={`/toy-details/${toyId}`} className='btn px-3 py-2 hover:bg-yellow-400'>View Details</Link>
+                    <Link to={`/toy-details/${toyId}`} className='btn px-3 py-2 hover:bg-yellow-400'>View More</Link>
                 </div>
             </div>
         </div>

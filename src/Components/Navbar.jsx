@@ -34,6 +34,7 @@ const Navbar = () => {
                         <NavLink className='font-semibold' to="/">Home</NavLink>
                         <NavLink className='font-semibold' to="/about-us">About Us</NavLink>
                         <NavLink className='font-semibold' to="/contact-us">Contact Us</NavLink>
+                        <NavLink className='font-semibold' to="/profile">Profile</NavLink>
                     </ul>
                 </div>
                 <a className="text-4xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
@@ -46,19 +47,25 @@ const Navbar = () => {
                     <NavLink className='font-semibold' to="/">Home</NavLink>
                     <NavLink className='font-semibold' to="/about-us">About Us</NavLink>
                     <NavLink className='font-semibold' to="/contact-us">Contact Us</NavLink>
+                    <NavLink className='font-semibold' to="/profile">Profile</NavLink>
+
                 </ul>
             </div>
             <div className="navbar-end gap-5">
-                <img
+                {/* <img
                     className="w-10 h-10 object-cover rounded-full"
                     src={user?.photoURL || userIcon}
                     alt={user?.displayName || "Guest User"}
                     title={user?.displayName || "Guest User"} // This will show on hover
+                /> */}
+                <img
+                    className="w-10 h-10 object-cover rounded-full"
+                    src={user?.photoURL ? user.photoURL : userIcon}
+                    alt={user?.displayName ? user.displayName : "Ashik"}
+                    title={user?.displayName ? user.displayName : "Guest User"}
                 />
 
-                {/* <img className='w-10 h-10 object-cover rounded-full' src={user?.photoURL || userIcon}
-                    alt="" /> */}
-                {/* <img className="w-20 rounded-full" src={`${user ? user.photoURL : userIcon}`} alt="" title={user?.displayName || user?.email || "Guest User"} /> */}
+
                 {user ? <button onClick={handleLogout} className='btn'>Log Out</button> : <Link to="/auth/login" className='btn'>Login</Link>}
             </div>
             <ToastContainer></ToastContainer>

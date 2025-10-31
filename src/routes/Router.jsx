@@ -9,6 +9,7 @@ import PrivateRoute from "../provider/PrivateRoute";
 import ToyDetails from "../pages/toyDetails";
 import AboutUsPage from "../pages/AboutUsPage";
 import ContactUs from "../pages/ContactUs";
+import Profile from "../pages/Profile";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,12 @@ const router = createBrowserRouter([
             {
                 path: "/contact-us",
                 Component: ContactUs,
+            },
+            {
+                path: "profile",
+                element: <PrivateRoute>
+                    <Profile></Profile>
+                </PrivateRoute>,
             }
 
         ]

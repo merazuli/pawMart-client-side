@@ -5,7 +5,7 @@ import { app } from '../firebase/firebase.init';
 
 
 
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
 // googleProvider 
 
@@ -39,6 +39,9 @@ const AuthProvider = ({ children }) => {
             unsubscribe()
         }
     }, [])
+
+
+    // update profile 
 
     const updateUserProfile = (updatedData) => {
         return updateProfile(auth.currentUser, updatedData)
