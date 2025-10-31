@@ -10,6 +10,7 @@ import ToyDetails from "../pages/toyDetails";
 import AboutUsPage from "../pages/AboutUsPage";
 import ContactUs from "../pages/ContactUs";
 import Profile from "../pages/Profile";
+import Loading from "../Loading";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
                 path: "/category/:id",
                 Component: CategoriesItem,
                 loader: () => fetch("/items.json"),
+                hydrateFallbackElement: <Loading></Loading>
 
             },
             {
@@ -65,6 +67,7 @@ const router = createBrowserRouter([
             <ToyDetails></ToyDetails>
         </PrivateRoute>,
         loader: () => fetch("/items.json"),
+        hydrateFallbackElement: <Loading></Loading>
     },
     {
         path: "/*",

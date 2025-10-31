@@ -9,7 +9,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import LatestNews from './Latests';
 
-// Sample Image Data with Titles and Descriptions
 const images = [
     {
         id: 1,

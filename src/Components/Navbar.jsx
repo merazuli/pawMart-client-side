@@ -52,12 +52,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-5">
-                {/* <img
-                    className="w-10 h-10 object-cover rounded-full"
-                    src={user?.photoURL || userIcon}
-                    alt={user?.displayName || "Guest User"}
-                    title={user?.displayName || "Guest User"} // This will show on hover
-                /> */}
+
                 <img
                     className="w-10 h-10 object-cover rounded-full"
                     src={user?.photoURL ? user.photoURL : userIcon}

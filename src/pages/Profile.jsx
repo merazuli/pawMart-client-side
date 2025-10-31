@@ -47,11 +47,11 @@ const Profile = () => {
 
     return (
         <div className="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-6 mt-10">
+            <p>User Name: <span className="font-bold">{user?.displayName}</span></p>
             <title>ToyTopia – Profile</title>
             <h2 className="text-2xl font-semibold text-center mb-5 text-purple-700">
                 Update Your Profile
             </h2>
-            <p>{user?.displayName}</p>
 
             <form onSubmit={handleUpdate} className="space-y-4">
                 <div>
@@ -76,7 +76,7 @@ const Profile = () => {
                 </div>
 
                 <button
-                    type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg transition" >Submit
+                    type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg transition" >Try Now
                 </button>
 
             </form>

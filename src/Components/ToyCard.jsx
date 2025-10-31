@@ -12,7 +12,20 @@ const ToyCard = ({ item }) => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{item.toyName}
-                    <div className="badge badge-secondary">{rating.badge}</div>
+                    <div
+                        className={`badge ${rating.badge === "trending"
+                            ? "bg-red-500 text-white"
+                            : rating.badge === "hot"
+                                ? "bg-orange-500 text-white"
+                                : rating.badge === "popular"
+                                    ? "bg-green-500 text-white"
+                                    : "badge-secondary"
+                            }`}
+                    >
+                        {rating.badge}
+                    </div>
+
+
                 </h2>
                 <p>{description}</p>
                 <div className="flex items-center text-center   gap-1 text-orange-400 border-b border-base-400 pb-3">
