@@ -4,6 +4,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 const ContactUs = () => {
     return (
         <section className="bg-gradient-to-r from-blue-100 via-pink-100 to-purple-100 py-16 px-5 md:px-20">
+            <title>ToyTopia – Contact</title>
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-bold text-pink-600 mb-6">
                     Contact Us

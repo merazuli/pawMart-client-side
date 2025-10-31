@@ -68,6 +68,7 @@ const RegisterPage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
+            <title>ToyTopia – Register</title>
             <div className="card w-full max-w-md bg-purple-50 rounded-3xl shadow-2xl p-8">
                 <h2 className="text-3xl font-bold text-center text-purple-700 mb-6">
                     Register Your Account

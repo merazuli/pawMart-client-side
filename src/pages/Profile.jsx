@@ -40,14 +40,6 @@ const Profile = () => {
         }
 
 
-        // return updateUserProfile({ displayName: name, photoURL: photo })
-        //     .then(() => {
-        //         setUser({ ...user, displayName: name, photoURL: photo });
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
-
 
 
 
@@ -55,6 +47,7 @@ const Profile = () => {
 
     return (
         <div className="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-6 mt-10">
+            <title>ToyTopia – Profile</title>
             <h2 className="text-2xl font-semibold text-center mb-5 text-purple-700">
                 Update Your Profile
             </h2>
@@ -86,26 +79,8 @@ const Profile = () => {
                     type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg transition" >Submit
                 </button>
 
-                {/* <button
-                    type="submit"
-                    disabled={loading}
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg transition"
-                >
-                    {loading ? "Updating..." : "Update Profile"}
-                </button> */}
             </form>
 
-            {/* Optional: live preview of photo
-            {photoURL && (
-                <div className="mt-6 text-center">
-                    <img
-                        src={photoURL}
-                        alt="User Preview"
-                        className="w-24 h-24 mx-auto rounded-full object-cover border-2 border-purple-300"
-                    />
-                    <p className="mt-2 font-medium text-gray-700">hi</p>
-                </div>
-            )} */}
         </div>
     );
 };

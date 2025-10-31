@@ -4,6 +4,7 @@ import { FaSmileBeam, FaTruck, FaGift, FaHeart } from "react-icons/fa";
 const AboutUsPage = () => {
     return (
         <section className="bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 py-12 md:py-16 px-5 md:px-20">
+            <title>ToyTopia – About</title>
             <div className="max-w-6xl mx-auto text-center">
                 <h2 className="text-4xl md:text-5xl font-bold text-pink-600 mb-3">
                     About Us
