@@ -5,16 +5,14 @@ import { toast } from "react-toastify";
 
 const ToyDetailsCard = ({ toy }) => {
     const {
-        toyName,
-        rating = {},
+        name,
         description,
         price,
         sellerName,
         sellerEmail,
         categoryId,
-        availableQuantity,
-        subCategory,
     } = toy || {};
+    console.log(toy)
 
     return (
         <div className="max-w-3xl mx-auto">
@@ -22,31 +20,21 @@ const ToyDetailsCard = ({ toy }) => {
                 {/* Image */}
                 <figure className="relative">
                     <img
-                        src={toy.pictureURL}
-                        alt={toyName}
+                        src={toy?.image}
+                        alt=""
                         className="w-full h-72 object-cover"
                     />
-                    {rating?.badge && (
-                        <span className="absolute top-4 right-4 bg-purple-600 text-white text-sm px-3 py-1 rounded-full shadow-md">
-                            {rating.badge}
-                        </span>
-                    )}
+
                 </figure>
 
                 {/* Body */}
                 <div className="p-6 space-y-5">
                     <h2 className="text-3xl font-bold text-center text-purple-700">
-                        {toyName}
+                        {name}
                     </h2>
 
                     {/* Info Grid */}
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-gray-700 text-center">
-                        <div className="flex flex-col items-center">
-                            <FaStar className="text-yellow-400 text-lg mb-1" />
-                            <p className="font-medium">
-                                Rating: <span className="text-gray-800">{rating?.number || "N/A"}</span>
-                            </p>
-                        </div>
 
                         <div className="flex flex-col items-center">
                             <p className="font-medium">Price</p>
@@ -55,15 +43,6 @@ const ToyDetailsCard = ({ toy }) => {
                             </p>
                         </div>
 
-                        <div className="flex flex-col items-center">
-                            <p className="font-medium">Available</p>
-                            <p className="text-purple-700 font-semibold">{availableQuantity || 0}</p>
-                        </div>
-
-                        <div className="flex flex-col items-center">
-                            <p className="font-medium">Category</p>
-                            <p className="text-pink-600 font-semibold">{subCategory || "N/A"}</p>
-                        </div>
                     </div>
 
                     {/* Description */}
@@ -95,41 +74,7 @@ const ToyDetailsCard = ({ toy }) => {
                     </div>
                 </div>
             </div>
-            {/* form section */}
-            <form
-                className="flex flex-col gap-4 bg-white/30 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white/40 w-full max-w-md mx-auto"
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    toast.success("Thank you for subscribing!");
-                    e.target.reset()
-                }}
-            >
 
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                    required
-                    className="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-400 focus:outline-none text-gray-800 placeholder-gray-500 bg-white/80"
-                />
-
-                <input
-                    type="email"
-                    placeholder="Your Email"
-                    required
-                    className="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-400 focus:outline-none text-gray-800 placeholder-gray-500 bg-white/80"
-                />
-
-                <button
-                    type="submit"
-                    className="mt-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold py-3 rounded-lg shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
-                >
-                    Subscribe
-                </button>
-
-                <p className="text-xs text-gray-500 text-center mt-3">
-                    We respect your privacy. Unsubscribe anytime.
-                </p>
-            </form>
 
         </div>
     );
