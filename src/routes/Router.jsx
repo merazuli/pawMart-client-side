@@ -23,7 +23,6 @@ const router = createBrowserRouter([
             {
                 path: "/category/:id",
                 Component: CategoriesItem,
-                loader: () => fetch("/items.json"),
                 hydrateFallbackElement: <Loading></Loading>
 
             },
@@ -62,7 +61,6 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
             <ToyDetails></ToyDetails>
         </PrivateRoute>,
-        loader: () => fetch("/items.json"),
         hydrateFallbackElement: <Loading></Loading>
     },
 

@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router';
 import ToyCard from '../Components/toyCard';
 
 const CategoriesItem = () => {
-    const { id } = useParams();
-    const data = useLoaderData();
-
     const [services, setServices] = useState([])
 
     // filtered data for use useeffect 
@@ -42,7 +38,7 @@ const CategoriesItem = () => {
 
             <div className='grid lg:grid-cols-3  md:grid-cols-2 gap-5'>
                 {
-                    services.map(item => <ToyCard key={item.toyId} item={item}></ToyCard>)
+                    services.map(item => <ToyCard key={services._id} item={item}></ToyCard>)
                 }
             </div>
         </div>
