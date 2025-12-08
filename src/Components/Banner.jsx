@@ -7,7 +7,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
-import LatestNews from './Latests';
 
 const images = [
     {
@@ -35,7 +34,6 @@ const Banner = () => {
     return (
         <div className='w-11/12 mx-auto' style={{ margin: '20px auto', position: 'relative' }}>
             <h2 className='text-2xl font-semibold' style={{ textAlign: 'center', marginBottom: '20px' }}><span className='lg:text-4xl mb-5 font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent'> ToyTopia</span> – A Local Kids Toy Store Platform</h2>
-            {/* <LatestNews></LatestNews> */}
 
             <Swiper
                 modules={[Pagination, Navigation, Autoplay]}
@@ -48,7 +46,7 @@ const Banner = () => {
                     delay: 2000,
                     disableOnInteraction: false,
                 }}
-                style={{ height: '300px', '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }}
+                style={{ height: '200px', '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }}
             >
                 {images.map((image) => (
                     <SwiperSlide key={image.id} style={{ position: 'relative' }}>

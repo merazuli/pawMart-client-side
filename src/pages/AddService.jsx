@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import axios from "axios";
 import Navbar from '../Components/Navbar';
 import { AuthContext } from '../provider/AuthProvider';
 
@@ -28,7 +29,11 @@ const AddService = () => {
             email,
             date
         }
-        console.log(formData)
+        // console.log(formData);
+        axios.post('http://localhost:3000/services', formData)
+            .then(res => {
+                console.log(res)
+            })
 
 
     }
