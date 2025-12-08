@@ -6,10 +6,11 @@ import AuthLayout from "../layout/AuthLayout";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import PrivateRoute from "../provider/PrivateRoute";
-import ToyDetails from "../pages/toyDetails";
 import Profile from "../pages/Profile";
 import Loading from "../Loading";
 import AddService from "../pages/AddService";
+import MyServices from "../pages/MyServices";
+import ToyDetails from "../pages/ToyDetails";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
     {
         path: "/add-services",
         element: <AddService></AddService>
+    },
+    {
+        path: "/my-services",
+        element: <MyServices></MyServices>
     },
     {
         path: "/auth",

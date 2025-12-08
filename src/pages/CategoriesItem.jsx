@@ -1,23 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import ToyCard from '../Components/toyCard';
+import ToyCard from '../Components/ToyCard';
+
 
 const CategoriesItem = () => {
     const [services, setServices] = useState([])
 
-    // filtered data for use useeffect 
-    // useEffect(() => {
-    //     if (id == 0) {
-    //         setCategoryItems(data)
-    //     } else {
-
-    //         const filteredItems = data.filter(items => items.categoryId == id);
-    //         setCategoryItems(filteredItems)
-    //     }
-    //     // console.log(filteredItems)
-
-    // }, [data, id])
-
-    // console.log(categoryItems)
     useEffect(() => {
         fetch('http://localhost:3000/services')
             .then(res => res.json())
