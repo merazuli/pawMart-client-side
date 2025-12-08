@@ -7,10 +7,9 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import PrivateRoute from "../provider/PrivateRoute";
 import ToyDetails from "../pages/toyDetails";
-import AboutUsPage from "../pages/AboutUsPage";
-import ContactUs from "../pages/ContactUs";
 import Profile from "../pages/Profile";
 import Loading from "../Loading";
+import AddService from "../pages/AddService";
 
 const router = createBrowserRouter([
     {
@@ -28,14 +27,7 @@ const router = createBrowserRouter([
                 hydrateFallbackElement: <Loading></Loading>
 
             },
-            {
-                path: "/about-us",
-                Component: AboutUsPage,
-            },
-            {
-                path: "/contact-us",
-                Component: ContactUs,
-            },
+
             {
                 path: "profile",
                 element: <PrivateRoute>
@@ -45,6 +37,10 @@ const router = createBrowserRouter([
 
         ]
 
+    },
+    {
+        path: "/add-services",
+        element: <AddService></AddService>
     },
     {
         path: "/auth",
@@ -69,11 +65,11 @@ const router = createBrowserRouter([
         loader: () => fetch("/items.json"),
         hydrateFallbackElement: <Loading></Loading>
     },
+
     {
         path: "/*",
         element: <h1>Error page</h1>
     }
-
 
 ])
 

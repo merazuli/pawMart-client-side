@@ -33,6 +33,7 @@ const LoginPage = () => {
                 navigate(`${location.state ? location.state : "/"}`)
             })
             .catch(error => {
+                console.log(error)
                 toast.error("please inter valid password")
             })
     }

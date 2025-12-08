@@ -32,22 +32,21 @@ const Navbar = () => {
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <NavLink className='font-semibold' to="/">Home</NavLink>
-                        <NavLink className='font-semibold' to="/about-us">About Us</NavLink>
-                        <NavLink className='font-semibold' to="/contact-us">Contact Us</NavLink>
                         <NavLink className='font-semibold' to="/profile">Profile</NavLink>
+                        <NavLink className='font-semibold' to="/add-services">Add Service</NavLink>
+
                     </ul>
                 </div>
                 <a className="text-4xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
-                    ToyTopia
+                    PawMART
                 </a>
 
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal flex gap-10  px-1">
                     <NavLink className='font-semibold' to="/">Home</NavLink>
-                    <NavLink className='font-semibold' to="/about-us">About Us</NavLink>
-                    <NavLink className='font-semibold' to="/contact-us">Contact Us</NavLink>
                     <NavLink className='font-semibold' to="/profile">Profile</NavLink>
+                    <NavLink className='font-semibold' to="/add-services">Add Service</NavLink>
 
                 </ul>
             </div>
