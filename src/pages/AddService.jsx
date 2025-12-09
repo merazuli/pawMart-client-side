@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import axios from "axios";
+import Swal from 'sweetalert2';
 import Navbar from '../Components/Navbar';
 import { AuthContext } from '../provider/AuthProvider';
+import { useNavigate } from 'react-router';
 
 const AddService = () => {
-    const { user } = useContext(AuthContext)
+    const { user } = useContext(AuthContext);
+    const navigation = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -32,7 +35,23 @@ const AddService = () => {
         // console.log(formData);
         axios.post('http://localhost:3000/services', formData)
             .then(res => {
-                console.log(res)
+                console.log(res.data)
+                if (res.data.acknowledged) {
+                    Swal.fire({
+                        title: "Service Is Created Successfully!",
+                        icon: "success",
+                        draggable: true
+                    });
+                    form.reset()
+                    navigation('/')
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Something went wrong!",
+                    });
+                }
+
             })
 
 
@@ -47,24 +66,22 @@ const AddService = () => {
 
                     {/* Product/Pet Name */}
                     <div>
-                        <label className="font-semibold">Product / Pet Name</label>
+                        <label className="font-semibold text-blue-700">Product / Pet Name</label>
                         <input
                             type="text"
                             name="name"
                             placeholder="Enter name"
-
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                             required
                         />
                     </div>
 
                     {/* Category */}
                     <div>
-                        <label className="font-semibold">Category</label>
+                        <label className="font-semibold text-purple-700">Category</label>
                         <select
                             name="category"
-
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                             required
                         >
                             <option value="">Select Category</option>
@@ -77,38 +94,34 @@ const AddService = () => {
 
                     {/* Price */}
                     <div>
-                        <label className="font-semibold">Price</label>
+                        <label className="font-semibold text-green-700">Price</label>
                         <input
                             type="number"
                             name="price"
                             placeholder="Enter price"
-                            className="w-full p-2 border rounded-lg bg-gray-100"
+                            className="w-full p-2 border border-green-300 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-500"
                         />
-                        {/* {formData.category === "Pets" && (
-                        <p className="text-sm text-gray-500">Pets have price = 0</p>
-                    )} */}
                     </div>
 
                     {/* Location */}
                     <div>
-                        <label className="font-semibold">Location</label>
+                        <label className="font-semibold text-teal-700">Location</label>
                         <input
                             type="text"
                             name="location"
                             placeholder="Enter location"
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border border-teal-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
                             required
                         />
                     </div>
 
                     {/* Description */}
                     <div>
-                        <label className="font-semibold">Description</label>
+                        <label className="font-semibold text-orange-700">Description</label>
                         <textarea
                             name="description"
                             placeholder="Write details"
-
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border border-orange-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                             rows="3"
                             required
                         ></textarea>
@@ -116,45 +129,47 @@ const AddService = () => {
 
                     {/* Image URL */}
                     <div>
-                        <label className="font-semibold">Image URL</label>
+                        <label className="font-semibold text-pink-700">Image URL</label>
                         <input
                             type="text"
                             name="image"
                             placeholder="https://example.com/image.jpg"
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
                             required
                         />
                     </div>
 
-                    {/* Date (Pick Up) */}
+                    {/* Date */}
                     <div>
-                        <label className="font-semibold">Pick Up Date</label>
+                        <label className="font-semibold text-indigo-700">Pick Up Date</label>
                         <input
                             type="date"
                             name="date"
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
                             required
                         />
                     </div>
 
-                    {/* Email (readonly) */}
+                    {/* Email */}
                     <div>
-                        <label className="font-semibold">Email</label>
+                        <label className="font-semibold text-red-700">Email</label>
                         <input
                             type="email"
                             name="email"
                             defaultValue={user?.email}
-                            className="w-full p-2 border rounded-lg bg-gray-100"
+                            className="w-full p-2 border border-red-300 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="w-full bg-blue-600 text-white p-2 rounded-lg font-semibold hover:bg-blue-700 duration-200"
+                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 duration-200 shadow-lg"
                     >
                         Submit Listing
                     </button>
+
                 </form>
+
             </div>
         </div>
     );

@@ -16,14 +16,14 @@ const ToyCard = ({ item }) => {
                 <p>{description}</p>
                 <div className="flex items-center text-center   gap-1 text-orange-400 border-b border-base-400 pb-3">
                     <div className='flex items-center '>
-                        <p className='ml-5  text-black'>Price: <span className='font-bold'>{price}</span> </p>
-                        <p className='ml-5  text-black'>Date: <span className='font-bold'>{date}</span> </p>
-                        <p className='ml-5  text-black'>Category: <span className='font-bold'>{category}</span> </p>
+                        <p className='ml-5  text-white'>Price: <span className='font-bold'>{price}</span> </p>
+                        <p className='ml-5  text-white'>Date: <span className='font-bold'>{date}</span> </p>
+                        <p className='ml-5  text-white'>Category: <span className='font-bold'>{category}</span> </p>
 
                     </div>
                 </div>
                 <div className="card-actions justify-center">
-                    <Link to={`/toy-details/${_id}`} className='btn px-3 py-2 hover:bg-yellow-400'>View More</Link>
+                    <Link to={`/toy-details/${_id}`} className='btn px-3 py-2 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 duration-200 shadow-lg'>View More</Link>
                 </div>
             </div>
         </div>

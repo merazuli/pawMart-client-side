@@ -3,6 +3,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import { Link } from 'react-router';
 import axios from 'axios';
 import Navbar from '../Components/Navbar';
+import Swal from 'sweetalert2';
 
 const MyServices = () => {
     const [myServices, setMyServices] = useState([]);
@@ -25,16 +26,36 @@ const MyServices = () => {
 
     // handle delete 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:3000/delete/${id}`)
-            .then(res => {
-                console.log(res.data)
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axios.delete(`http://localhost:3000/delete/${id}`)
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.deletedCount == 1) {
+                            const filterData = myServices.filter(service => service._id != id);
+                            setMyServices(filterData)
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            })
+                        }
 
-                const filterData = myServices.filter(service => service._id != id);
-                setMyServices(filterData)
-            })
-            .catch(err => {
-                console.log(err)
-            });
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    });
+            }
+        })
+
     }
 
     return (

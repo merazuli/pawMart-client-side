@@ -174,7 +174,7 @@ const UpdateService = () => {
 
                     <button
                         type="submit"
-                        className="w-full bg-blue-600 text-white p-2 rounded-lg font-semibold hover:bg-blue-700 duration-200"
+                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 duration-200 shadow-lg"
                     >
                         Update
                     </button>

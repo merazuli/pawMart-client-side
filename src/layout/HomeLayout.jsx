@@ -23,7 +23,7 @@ const HomeLayout = () => {
                     <LeftAside></LeftAside>
                 </aside> */}
                 {/* main Section  */}
-                <main className='lg:col-span-9 col-span-12 max-w-7xl mx-auto'>
+                <main className='lg:col-span-9 col-span-12 max-w-7xl mx-auto mb-10'>
                     {state == "loading" ? < Loading /> : <Outlet></Outlet>}
                 </main>
 
