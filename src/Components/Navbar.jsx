@@ -38,6 +38,7 @@ const Navbar = () => {
                                     <NavLink className='font-semibold' to="/profile">Profile</NavLink>
                                     <NavLink className='font-semibold' to="/add-services">Add Service</NavLink>
                                     <NavLink className='font-semibold' to="/my-services">My Service</NavLink>
+                                    <NavLink className='font-semibold' to="/my-orders">My Orders</NavLink>
                                 </>
                             )
                         }
@@ -58,6 +59,8 @@ const Navbar = () => {
                                 <NavLink className='font-semibold' to="/profile">Profile</NavLink>
                                 <NavLink className='font-semibold' to="/add-services">Add Service</NavLink>
                                 <NavLink className='font-semibold' to="/my-services">My Service</NavLink>
+                                <NavLink className='font-semibold' to="/my-orders">My Orders</NavLink>
+
                             </>
                         )
                     }

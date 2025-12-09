@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../provider/AuthProvider';
 import { Link } from 'react-router';
 import axios from 'axios';
+import Navbar from '../Components/Navbar';
 
 const MyServices = () => {
     const [myServices, setMyServices] = useState([]);
@@ -38,6 +39,7 @@ const MyServices = () => {
 
     return (
         <div>
+            <Navbar></Navbar>
             <div className="overflow-x-auto">
                 <table className="table">
                     {/* head */}

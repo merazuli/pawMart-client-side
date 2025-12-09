@@ -48,7 +48,7 @@ const ToyDetails = () => {
             address,
             phone,
             note,
-            data: new Date()
+            date: new Date()
         }
         axios.post('http://localhost:3000/orders', formData)
             .then(res => {
