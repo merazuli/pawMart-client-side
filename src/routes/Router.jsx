@@ -11,6 +11,8 @@ import Loading from "../Loading";
 import AddService from "../pages/AddService";
 import MyServices from "../pages/MyServices";
 import ToyDetails from "../pages/ToyDetails";
+import UpdateService from "../pages/Updateservice";
+
 
 const router = createBrowserRouter([
     {
@@ -40,11 +42,15 @@ const router = createBrowserRouter([
     },
     {
         path: "/add-services",
-        element: <AddService></AddService>
+        element: <PrivateRoute><AddService></AddService></PrivateRoute>
     },
     {
         path: "/my-services",
-        element: <MyServices></MyServices>
+        element: <PrivateRoute><MyServices></MyServices></PrivateRoute>
+    },
+    {
+        path: "/update-services/:id",
+        element: <PrivateRoute><UpdateService></UpdateService></PrivateRoute>
     },
     {
         path: "/auth",

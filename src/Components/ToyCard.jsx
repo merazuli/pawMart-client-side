@@ -3,11 +3,11 @@ import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 const ToyCard = ({ item }) => {
-    const { description, price, _id, name, image, date } = item;
+    const { description, price, _id, name, image, date, category } = item;
     return (
         <div className="card bg-base-100  shadow-sm hover:scale-105 ease-in-out transition">
             <figure>
-                <img className='h-[150px]'
+                <img className='w-10/12 h-[200px]'
                     src={image} />
             </figure>
             <div className="card-body">
@@ -18,6 +18,8 @@ const ToyCard = ({ item }) => {
                     <div className='flex items-center '>
                         <p className='ml-5  text-black'>Price: <span className='font-bold'>{price}</span> </p>
                         <p className='ml-5  text-black'>Date: <span className='font-bold'>{date}</span> </p>
+                        <p className='ml-5  text-black'>Category: <span className='font-bold'>{category}</span> </p>
+
                     </div>
                 </div>
                 <div className="card-actions justify-center">
