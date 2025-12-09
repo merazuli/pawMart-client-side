@@ -18,14 +18,13 @@ It also demonstrates modern React development with Firebase, Tailwind CSS, React
 
 ## 🚀 Key Features  
 - 🔐 **Firebase Authentication** (Login / Register / Logout)  
-- 👤 **Profile Update** (Change name and profile photo URL)  
-- 🧸 **Toy Listing** (View toys by categories)  
-- 📄 **Toy Details Page** (Detailed info including rating and seller)  
-- ➕ **Add / Update / Delete Toys** (Only for logged-in users)  
+- 👤 **Profile Update** (Change name and profile photo URL)    
+- ➕ **Add / Update / Delete ** (Only for logged-in users)  
 - 🎢 **Swiper Slider** (Interactive hero/banner slider for promotions)  
 - 💬 **React Toastify Notifications** (Success, error & info messages)  
 - 🌙 **Responsive UI** (Mobile-friendly design with Tailwind CSS)  
 - 🔄 **Dynamic Routing** (Handled with React Router DOM)  
+- 🧭 **Smooth Navigation** and animations with Framer Motion  
 - 🧭 **Smooth Navigation** and animations with Framer Motion  
 
 ---
