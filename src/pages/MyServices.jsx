@@ -8,8 +8,9 @@ import Swal from 'sweetalert2';
 const MyServices = () => {
     const [myServices, setMyServices] = useState([]);
     const { user } = useContext(AuthContext);
-    console.log(myServices)
-    console.log(user)
+    const [loading, setLoading] = useState(true)
+    // console.log(myServices)
+    // console.log(user)
 
     useEffect(() => {
         fetch(`https://missionscic10-xi.vercel.app/my-services?email=${user?.email}`)
@@ -17,6 +18,7 @@ const MyServices = () => {
             .then(data => {
                 console.log(data)
                 setMyServices(data)
+                setLoading(false)
             }
             )
             .catch(err => {
@@ -36,7 +38,7 @@ const MyServices = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`https://missionscic10-xi.vercel.app0/delete/${id}`)
+                axios.delete(`https://missionscic10-xi.vercel.app/delete/${id}`)
                     .then(res => {
                         console.log(res.data)
                         if (res.data.deletedCount == 1) {
@@ -56,6 +58,10 @@ const MyServices = () => {
             }
         })
 
+    }
+
+    if (loading) {
+        return <span className="loading loading-spinner text-green-500 loading-lg w-[100px] text-center mt-20"></span>
     }
 
     return (
