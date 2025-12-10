@@ -59,7 +59,7 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className="text-4xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+                <a className="lg:text-4xl text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
                     PawMART
                 </a>
 

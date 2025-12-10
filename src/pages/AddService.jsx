@@ -33,7 +33,7 @@ const AddService = () => {
             date
         }
         // console.log(formData);
-        axios.post('http://localhost:3000/services', formData)
+        axios.post('https://missionscic10-xi.vercel.app/services', formData)
             .then(res => {
                 console.log(res.data)
                 if (res.data.acknowledged) {

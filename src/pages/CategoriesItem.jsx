@@ -11,7 +11,7 @@ const CategoriesItem = () => {
     console.log(services)
 
     useEffect(() => {
-        fetch(`http://localhost:3000/services?category=${category}`)
+        fetch(`https://missionscic10-xi.vercel.app/services?category=${category}`)
             .then(res => res.json())
             .then(data => {
                 setServices(data)

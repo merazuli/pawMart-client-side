@@ -16,11 +16,6 @@ const HomeLayout = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <div className='grid grid-cols-12 w-11/12 mx-auto gap-5 mt-5'>
-                {/* left side  */}
-                {/* <aside className="lg:col-span-2  col-span-12  lg:sticky top-0 h-fit">
-                    <h1 className='font-bold text-xl'>Category</h1>
-                    <LeftAside></LeftAside>
-                </aside> */}
                 {/* main Section  */}
                 <main className='lg:col-span-9 col-span-12 max-w-7xl mx-auto mb-10'>
                     {state == "loading" ? < Loading /> : <Outlet></Outlet>}

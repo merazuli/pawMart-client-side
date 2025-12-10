@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import Navbar from '../Components/Navbar';
 import { AuthContext } from '../provider/AuthProvider';
 import axios from 'axios';
@@ -10,13 +10,13 @@ const ToyDetails = () => {
     const [services, setServices] = useState([])
     const [loading, setLoading] = useState(true)
     const { user } = useContext(AuthContext)
-    const navigation = useNavigate()
+
 
     // console.log(services)
 
     // console.log(toy)
     useEffect(() => {
-        fetch(`http://localhost:3000/services/${id}`)
+        fetch(`https://missionscic10-xi.vercel.app/services/${id}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
@@ -50,7 +50,7 @@ const ToyDetails = () => {
             note,
             date: new Date()
         }
-        axios.post('http://localhost:3000/orders', formData)
+        axios.post('https://missionscic10-xi.vercel.app/orders', formData)
             .then(res => {
                 console.log(res.data)
             })

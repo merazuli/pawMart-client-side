@@ -7,18 +7,17 @@ const ToyCard = ({ item }) => {
     return (
         <div className="card bg-base-100  shadow-sm hover:scale-105 ease-in-out transition">
             <figure>
-                <img className='w-10/12 h-[200px]'
+                <img className='w-10/12 h-[200px] hover:scale-105 transition ease-in-out'
                     src={image} />
             </figure>
             <div className="card-body">
-                <h2 className="card-title">{name}
-                </h2>
+                <h2 className="card-title">{name}</h2>
                 <p>{description}</p>
                 <div className="flex items-center text-center   gap-1 text-orange-400 border-b border-base-400 pb-3">
                     <div className='flex items-center '>
-                        <p className='ml-5  text-white'>Price: <span className='font-bold'>{price}</span> </p>
-                        <p className='ml-5  text-white'>Date: <span className='font-bold'>{date}</span> </p>
-                        <p className='ml-5  text-white'>Category: <span className='font-bold'>{category}</span> </p>
+                        <p className='ml-5  text-gray-700'>Price: <span className='font-bold'>{price}</span> </p>
+                        <p className='ml-5  text-gray-700'>Date: <span className='font-bold'>{date}</span> </p>
+                        <p className='ml-5  text-gray-700'>Category: <span className='font-bold'>{category}</span> </p>
 
                     </div>
                 </div>

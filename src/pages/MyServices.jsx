@@ -12,7 +12,7 @@ const MyServices = () => {
     console.log(user)
 
     useEffect(() => {
-        fetch(`http://localhost:3000/my-services?email=${user?.email}`)
+        fetch(`https://missionscic10-xi.vercel.app/my-services?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
@@ -36,7 +36,7 @@ const MyServices = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:3000/delete/${id}`)
+                axios.delete(`https://missionscic10-xi.vercel.app0/delete/${id}`)
                     .then(res => {
                         console.log(res.data)
                         if (res.data.deletedCount == 1) {

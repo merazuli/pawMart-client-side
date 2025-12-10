@@ -12,7 +12,7 @@ const UpdateService = () => {
     const navigation = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/services/${id}`)
+        axios.get(`https://missionscic10-xi.vercel.app/services/${id}`)
             .then(res => {
                 setService(res.data)
             })
@@ -44,7 +44,7 @@ const UpdateService = () => {
             createdAt: service?.createdAt,
         }
         // console.log(formData)
-        axios.put(`http://localhost:3000/update/${id}`, formData)
+        axios.put(`https://missionscic10-xi.vercel.app0/update/${id}`, formData)
             .then(res => {
                 setService(res.data)
                 if (res.data.acknowledged == true) {

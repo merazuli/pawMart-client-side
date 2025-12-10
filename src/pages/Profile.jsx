@@ -48,6 +48,7 @@ const Profile = () => {
     return (
         <div className="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-6 mt-10">
             <p>User Name: <span className="font-bold">{user?.displayName}</span></p>
+            <p>User Name: <span className="font-bold">{user?.email}</span></p>
             <title>Pawmart – Profile</title>
             <h2 className="text-2xl font-semibold text-center mb-5 text-purple-700">
                 Update Your Profile

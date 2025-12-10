@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3000/orders')
+        axios.get('https://missionscic10-xi.vercel.app/orders')
             .then(res => {
                 setMyOrders(res.data)
             })
@@ -67,7 +67,7 @@ const MyOrders = () => {
                     </table>
                 </div>
             </div>
-            <div className="fixed bottom-0 left-0 w-full z-50">
+            <div className="lg:fixed lg:bottom-0 lg:left-0 lg:w-full lg:z-50 ">
                 <Footer />
             </div>
 
