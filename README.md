@@ -48,6 +48,4 @@ It also demonstrates modern React development with Firebase, Tailwind CSS, React
 ## ⚙️ How to Run Locally  
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/kids-toys-store.git
-   cd kids-toys-store
+
