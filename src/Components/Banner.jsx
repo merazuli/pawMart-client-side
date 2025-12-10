@@ -1,4 +1,5 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
@@ -11,29 +12,37 @@ import 'swiper/css/autoplay';
 const images = [
     {
         id: 1,
-        url: 'https://i.ibb.co.com/S41VRWsX/Pull-Back-Police-Car.jpg',
-        title: 'Pull-back police car toy with flashing lights and sound effects.',
-        description: 'Large colorful blocks perfect for toddlers to stack and play.'
+        url: 'https://cdn.dribbble.com/userupload/2841504/file/original-3315cd86212390c4241a2fc98edf51ad.jpg?resize=2048x826&vertical=center&utm_source=chatgpt.com',
+        title: '“Find Your Furry Friend Today!”',
 
     },
     {
         id: 2,
-        url: 'https://i.ibb.co.com/N2RBw52H/Mega-Bloks-First-Builders-Set.jpg',
-        title: 'Mega Bloks First Builders Set',
-        description: 'Large colorful blocks perfect for toddlers to stack and play.'
+        url: 'https://images.squarespace-cdn.com/content/v1/65160421ff819966b2caae23/1740320844359-A8B24GNIEZ0D985NE7AT/FamilyAdoptingDog.jpeg?utm_source=chatgpt.com',
+        title: 'Adopt, Don’t Shop — Give a Pet a Home.',
     },
     {
         id: 3,
-        url: 'https://i.ibb.co.com/cc6CHPdX/Hot-Wheels-Race-Car.jpg',
-        title: 'Hot Wheels Race Car',
-        description: 'A sleek mini race car with durable metal body and cool design.'
+        url: 'https://freerangestock.com/sample/164082/family-with-dog-having-picnic-in-park.jpg',
+        title: 'Because Every Pet Deserves Love and Care.”',
     },
 ];
 
 const Banner = () => {
     return (
         <div className='w-11/12 mx-auto' style={{ margin: '20px auto', position: 'relative' }}>
-            <h2 className='text-2xl font-semibold' style={{ textAlign: 'center', marginBottom: '20px' }}><span className='lg:text-4xl mb-5 font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent'> ToyTopia</span> – A Local Kids Toy Store Platform</h2>
+            <h2 className="text-4xl font-bold text-center my-5">
+                <Typewriter
+                    options={{
+                        strings: ["PawMART – Pet Adoption & Supply Portal"],
+                        autoStart: true,
+                        loop: true,
+                        delay: 60,
+                        wrapperClassName:
+                            "bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent font-bold"
+                    }}
+                />
+            </h2>
 
             <Swiper
                 modules={[Pagination, Navigation, Autoplay]}
@@ -46,7 +55,7 @@ const Banner = () => {
                     delay: 2000,
                     disableOnInteraction: false,
                 }}
-                style={{ height: '200px', '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }}
+                style={{ height: '450px', '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }}
             >
                 {images.map((image) => (
                     <SwiperSlide key={image.id} style={{ position: 'relative' }}>
@@ -58,19 +67,24 @@ const Banner = () => {
 
                         <div style={{
                             position: 'absolute',
-                            bottom: '200px',
+                            bottom: '100px',
                             left: '0',
                             width: '100%',
                             color: 'white',
                             padding: '20px',
                             textAlign: 'center',
                         }}>
-                            <h3 className='text-green-600 text-3xl font-bold' style={{ margin: '0 0 10px 0', fontSize: '2em' }}>{image.title}</h3>
-                            <p className='text-amber-400' style={{ margin: '0', fontSize: '1.2em' }}>{image.description}</p>
+                            <h3 className="text-pink-500 text-4xl font-bold" style={{ margin: '0 0 10px 0', fontSize: '2em' }}>
+                                {image.title}
+                            </h3>
+
                         </div>
+
                     </SwiperSlide>
                 ))}
             </Swiper>
+
+
         </div>
     );
 };

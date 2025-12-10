@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import { AuthContext } from '../provider/AuthProvider';
 import { useNavigate, useParams } from 'react-router';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const UpdateService = () => {
     const { user } = useContext(AuthContext);
@@ -42,11 +43,19 @@ const UpdateService = () => {
             date,
             createdAt: service?.createdAt,
         }
-        console.log(formData)
+        // console.log(formData)
         axios.put(`http://localhost:3000/update/${id}`, formData)
             .then(res => {
                 setService(res.data)
+                if (res.data.acknowledged == true) {
+                    Swal.fire({
+                        title: "Service Is Update Successfully!",
+                        icon: "success",
+                        draggable: true
+                    });
+                }
                 navigation('/my-services')
+
 
             })
             .catch(err => { console.log(err) })
@@ -59,31 +68,31 @@ const UpdateService = () => {
             <div className="max-w-xl mx-auto bg-white shadow-lg p-6 rounded-xl">
                 <h2 className="text-2xl font-bold mb-4 text-center">Update Listing</h2>
 
-                <form onSubmit={handleUpdate} className="space-y-4">
+                <form onSubmit={handleUpdate} className="space-y-4 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 p-6 rounded-xl shadow-xl border border-purple-200">
 
                     {/* Product/Pet Name */}
                     <div>
-                        <label className="font-semibold">Product / Pet Name</label>
+                        <label className="font-semibold text-purple-700">Product / Pet Name</label>
                         <input
                             type="text"
                             name="name"
                             placeholder="Enter name"
                             defaultValue={service?.name}
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-500 transition"
                             required
                         />
                     </div>
 
                     {/* Category */}
                     <div>
-                        <label className="font-semibold">Category</label>
+                        <label className="font-semibold text-purple-700">Category</label>
                         <select
                             name="category"
                             value={service?.category || ""}
                             onChange={(e) =>
                                 setService({ ...service, category: e.target.value })
                             }
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-purple-500 transition"
                             required
                         >
                             <option value="">Select Category</option>
@@ -92,45 +101,41 @@ const UpdateService = () => {
                             <option value="Accessories">Accessories</option>
                             <option value="Care Products">Care Products</option>
                         </select>
-
                     </div>
 
                     {/* Price */}
                     <div>
-                        <label className="font-semibold">Price</label>
+                        <label className="font-semibold text-purple-700">Price</label>
                         <input
                             type="number"
                             name="price"
                             placeholder="Enter price"
                             defaultValue={service?.price}
-                            className="w-full p-2 border rounded-lg bg-gray-100"
+                            className="w-full p-2 border rounded-lg bg-gray-100 focus:ring-2 focus:ring-purple-400 transition"
                         />
-                        {/* {formData.category === "Pets" && (
-                        <p className="text-sm text-gray-500">Pets have price = 0</p>
-                    )} */}
                     </div>
 
                     {/* Location */}
                     <div>
-                        <label className="font-semibold">Location</label>
+                        <label className="font-semibold text-purple-700">Location</label>
                         <input
                             type="text"
                             name="location"
                             defaultValue={service?.location}
                             placeholder="Enter location"
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-purple-400 transition"
                             required
                         />
                     </div>
 
                     {/* Description */}
                     <div>
-                        <label className="font-semibold">Description</label>
+                        <label className="font-semibold text-purple-700">Description</label>
                         <textarea
                             name="description"
                             placeholder="Write details"
                             defaultValue={service?.description}
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-purple-400 transition"
                             rows="3"
                             required
                         ></textarea>
@@ -138,47 +143,50 @@ const UpdateService = () => {
 
                     {/* Image URL */}
                     <div>
-                        <label className="font-semibold">Image URL</label>
+                        <label className="font-semibold text-purple-700">Image URL</label>
                         <input
                             type="text"
                             name="image"
                             defaultValue={service?.image}
                             placeholder="https://example.com/image.jpg"
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-purple-400 transition"
                             required
                         />
                     </div>
 
-                    {/* Date (Pick Up) */}
+                    {/* Date */}
                     <div>
-                        <label className="font-semibold">Pick Up Date</label>
+                        <label className="font-semibold text-purple-700">Pick Up Date</label>
                         <input
                             type="date"
                             name="date"
                             defaultValue={service?.date}
-                            className="w-full p-2 border rounded-lg"
+                            className="w-full p-2 border rounded-lg focus:ring-2 focus:ring-purple-400 transition"
                             required
                         />
                     </div>
 
-                    {/* Email (readonly) */}
+                    {/* Email */}
                     <div>
-                        <label className="font-semibold">Email</label>
+                        <label className="font-semibold text-purple-700">Email</label>
                         <input
                             type="email"
                             name="email"
-                            defaultValue={user?.email} readOnly
+                            defaultValue={user?.email}
+                            readOnly
                             className="w-full p-2 border rounded-lg bg-gray-100"
                         />
                     </div>
 
+                    {/* Button */}
                     <button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 duration-200 shadow-lg"
+                        className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-2 rounded-lg font-bold shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-indigo-700 transition duration-200"
                     >
                         Update
                     </button>
                 </form>
+
             </div>
         </div>
     );

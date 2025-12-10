@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
 import axios from 'axios';
+import Footer from './Footer';
 
 const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([])
@@ -66,6 +67,10 @@ const MyOrders = () => {
                     </table>
                 </div>
             </div>
+            <div className="fixed bottom-0 left-0 w-full z-50">
+                <Footer />
+            </div>
+
         </div>
     );
 };

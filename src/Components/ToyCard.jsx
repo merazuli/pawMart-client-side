@@ -23,7 +23,7 @@ const ToyCard = ({ item }) => {
                     </div>
                 </div>
                 <div className="card-actions justify-center">
-                    <Link to={`/toy-details/${_id}`} className='btn px-3 py-2 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 duration-200 shadow-lg'>View More</Link>
+                    <Link to={`/toy-details/${_id}`} className='btn px-3 py-2 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 duration-200 shadow-lg'>See Details</Link>
                 </div>
             </div>
         </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import { Outlet, useNavigation } from 'react-router';
-import LeftAside from '../Components/LeftAside';
 import Footer from '../pages/Footer';
 import RightSide from '../Components/RightSide';
 import Banner from '../Components/Banner';

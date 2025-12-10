@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
@@ -7,6 +7,19 @@ import userIcon from "../assets/user.png"
 
 const Navbar = () => {
     const { user, setUser, logOutUser } = useContext(AuthContext);
+    const [isChecked, setIsChecked] = useState(true);
+    const handleThemeChange = () => {
+        setIsChecked(!isChecked);
+
+        const html = document.querySelector("html");
+
+        if (isChecked) {
+            html.setAttribute("data-theme", "dark");
+        } else {
+            html.setAttribute("data-theme", "light");
+        }
+    };
+
 
 
     const handleLogout = () => {
@@ -32,6 +45,7 @@ const Navbar = () => {
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <NavLink className='font-semibold' to="/">Home</NavLink>
+                        <NavLink className='font-semibold' to="/">Pets & Supplies</NavLink>
                         {
                             user && (
                                 <>
@@ -53,6 +67,7 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal flex gap-10  px-1">
                     <NavLink className='font-semibold' to="/">Home</NavLink>
+                    <NavLink className='font-semibold' to="/">Pets & Supplies</NavLink>
                     {
                         user && (
                             <>
@@ -69,7 +84,35 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end gap-5">
-
+                <label className="flex cursor-pointer gap-2">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <path
+                            d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                    </svg>
+                    <input onClick={handleThemeChange} type="checkbox" value="synthwave" className="toggle theme-controller" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </label>
                 <img
                     className="w-10 h-10 object-cover rounded-full"
                     src={user?.photoURL ? user.photoURL : userIcon}
@@ -79,6 +122,8 @@ const Navbar = () => {
 
 
                 {user ? <button onClick={handleLogout} className='btn'>Log Out</button> : <Link to="/auth/login" className='btn'>Login</Link>}
+
+
             </div>
             <ToastContainer></ToastContainer>
         </div>

@@ -13,6 +13,7 @@ import MyServices from "../pages/MyServices";
 import ToyDetails from "../pages/ToyDetails";
 import UpdateService from "../pages/Updateservice";
 import MyOrders from "../pages/MyOrders";
+import Error from "../pages/Error";
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,6 @@ const router = createBrowserRouter([
             {
                 path: "/category/:id",
                 Component: CategoriesItem,
-                hydrateFallbackElement: <Loading></Loading>
 
             },
 
@@ -82,7 +82,7 @@ const router = createBrowserRouter([
 
     {
         path: "/*",
-        element: <h1>Error page</h1>
+        element: <Error></Error>
     }
 
 ])
