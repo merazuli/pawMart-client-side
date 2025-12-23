@@ -1,87 +1,108 @@
 import React, { useContext, useState } from "react";
 import { updateProfile } from "firebase/auth";
-import { toast } from "react-toastify"; // optional: if you use react-toastify for notifications
+import { toast } from "react-toastify";
 import { auth, AuthContext } from "../provider/AuthProvider";
 
-
 const Profile = () => {
-    const { updateUserProfile, setUser, user } = useContext(AuthContext);
-    console.log(user)
-    // const [name, setName] = useState("");
-    // const [photoURL, setPhotoURL] = useState("");
+    const { setUser, user } = useContext(AuthContext);
     const [loading, setLoading] = useState(false);
 
     const handleUpdate = async (e) => {
         e.preventDefault();
-        // updateUserProfile()
+        setLoading(true);
         const name = e.target.name.value;
         const photo = e.target.photo.value;
 
-
         try {
-            // Update in Firebase Auth
             await updateProfile(auth.currentUser, {
                 displayName: name,
                 photoURL: photo,
             });
 
-            // Optional: Update in context (if needed)
-            setUser(updateUserProfile({
-                displayName: name,
-                photoURL: photo,
-            }))
+            // Updating local state to reflect changes immediately
+            setUser({ ...auth.currentUser, displayName: name, photoURL: photo });
 
-            toast.success("✅ Profile updated successfully!");
+            toast.success("🐾 Profile updated successfully!");
         } catch (error) {
             console.error(error);
             toast.error("❌ Profile update failed!");
         } finally {
             setLoading(false);
         }
-
-
-
-
-
     };
 
     return (
-        <div className="max-w-md mx-auto bg-white shadow-lg rounded-2xl p-6 mt-10">
-            <p>User Name: <span className="font-bold">{user?.displayName}</span></p>
-            <p>User Name: <span className="font-bold">{user?.email}</span></p>
-            <title>Pawmart – Profile</title>
-            <h2 className="text-2xl font-semibold text-center mb-5 text-purple-700">
-                Update Your Profile
-            </h2>
+        <div className="flex items-center  justify-center bg-gradient-to-br from-purple-50 to-pink-50 p-6">
+            <div className="max-w-2xl w-full bg-white/80 backdrop-blur-md border border-white rounded-3xl shadow-2xl overflow-hidden">
 
-            <form onSubmit={handleUpdate} className="space-y-4">
-                <div>
-                    <label className="block font-medium mb-1">Name</label>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your name"
-                        className="w-full border border-purple-300 rounded-lg p-2 focus:ring-2 focus:ring-purple-400 outline-none"
-                        required
-                    />
+                {/* Header/Banner Section */}
+                <div className="h-32 bg-gradient-to-r from-purple-500 to-pink-500 relative">
+                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
+                        <div className="relative">
+                            <img
+                                src={user?.photoURL || "https://via.placeholder.com/150"}
+                                alt="Profile"
+                                className="w-24 h-24 rounded-full border-4 border-white object-cover shadow-lg"
+                            />
+                            <div className="absolute bottom-1 right-1 bg-green-500 w-5 h-5 border-2 border-white rounded-full"></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <label className="block font-medium mb-1">Photo URL</label>
-                    <input
-                        type="text" name="photo"
-                        placeholder="Enter image URL"
-                        className="w-full border border-purple-300 rounded-lg p-2 focus:ring-2 focus:ring-purple-400 outline-none"
-                        required
-                    />
+                {/* Content Section */}
+                <div className="pt-16 pb-8 px-8">
+                    <div className="text-center mb-6">
+                        <h2 className="text-2xl font-bold text-gray-800">{user?.displayName || "Pawmart User"}</h2>
+                        <p className="text-sm text-gray-500">{user?.email}</p>
+                    </div>
+
+                    <div className="bg-purple-50 rounded-2xl p-4 mb-6 flex justify-around text-center">
+                        <div>
+                            <p className="text-xs text-purple-400 uppercase font-bold tracking-wider">Status</p>
+                            <p className="text-sm font-semibold text-purple-700">Active Member</p>
+                        </div>
+                        <div className="border-l border-purple-200"></div>
+                        <div>
+                            <p className="text-xs text-purple-400 uppercase font-bold tracking-wider">Role</p>
+                            <p className="text-sm font-semibold text-purple-700">Pet Lover</p>
+                        </div>
+                    </div>
+
+                    <form onSubmit={handleUpdate} className="space-y-4">
+                        <div className="group">
+                            <label className="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">Full Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                defaultValue={user?.displayName}
+                                placeholder="Enter your name"
+                                className="w-full bg-gray-50 border border-transparent group-focus-within:border-purple-400 group-focus-within:bg-white rounded-xl p-3 transition-all outline-none"
+                                required
+                            />
+                        </div>
+
+                        <div className="group">
+                            <label className="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">Photo URL</label>
+                            <input
+                                type="text"
+                                name="photo"
+                                defaultValue={user?.photoURL}
+                                placeholder="Paste image link"
+                                className="w-full bg-gray-50 border border-transparent group-focus-within:border-purple-400 group-focus-within:bg-white rounded-xl p-3 transition-all outline-none"
+                                required
+                            />
+                        </div>
+
+                        <button
+                            disabled={loading}
+                            type="submit"
+                            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-bold py-3 rounded-xl shadow-lg shadow-purple-200 transition-all transform active:scale-95 disabled:opacity-50"
+                        >
+                            {loading ? "Updating..." : "Save Changes"}
+                        </button>
+                    </form>
                 </div>
-
-                <button
-                    type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg transition" >Try Now
-                </button>
-
-            </form>
-
+            </div>
         </div>
     );
 };

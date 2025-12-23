@@ -40,11 +40,8 @@ const LoginPage = () => {
                 const user = result.user;
                 toast.success("Login Success")
                 setUser(user);
-                if (!user.emailVerified) {
-                    toast('please verify your email address')
-                    return
-                }
-                navigate(`${location.state ? location.state : "/"}`)
+                navigate('/')
+                // navigate(`${location.state ? location.state : "/"}`)
             })
             .catch(error => {
                 console.log(error)
@@ -67,7 +64,7 @@ const LoginPage = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <title>PawMart– Login</title>
+            <title>PawMart – Login</title>
             <div className="card w-full max-w-md bg-purple-50 rounded-3xl shadow-2xl p-8">
                 <h2 className="text-3xl font-bold text-center text-purple-700 mb-6">
                     Login Your Account
